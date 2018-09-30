@@ -7,9 +7,13 @@
 //
 
 import XCTest
+
 @testable import LeetCode_practice
 
+
 class LeetCode_practiceTests: XCTestCase {
+    
+    let leetCode = AlgorithmCollection.shardCollection
     
     override func setUp() {
         super.setUp()
@@ -22,8 +26,8 @@ class LeetCode_practiceTests: XCTestCase {
     }
     
     func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+        
     }
     
     func testPerformanceExample() {
@@ -31,6 +35,13 @@ class LeetCode_practiceTests: XCTestCase {
         self.measure {
             // Put the code you want to measure the time of here.
         }
+    }
+    
+    //MARK: - 两数之和
+    func testTwoSum() {
+        let result = leetCode.twoSum([2, 7, 11, 15], 9)
+        print([Int](result))
+        
     }
     
 }

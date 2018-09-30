@@ -8,18 +8,24 @@
 
 import UIKit
 
-class ViewController: UIViewController {
 
+
+
+class ViewController: UIViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+
+        
+//
+//        //两数相加
+//        let res2 = leetCode.addTwoNumbers(ListNode(2, ListNode(4, ListNode(3))), ListNode(5, ListNode(6, ListNode(4))))
+//        print(res2.debugDescription)
+//
+//        let num = leetCode.reverse(1234567890)
+//        print("\(num)")
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
+    
 }
 
