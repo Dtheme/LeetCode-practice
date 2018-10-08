@@ -63,4 +63,38 @@ class SortAlgorithemTest: XCTestCase {
         }
         print(self.result)
     }
+    
+    func testQuickSort() {
+        var array : Array<Int> = disorderArray as! Array<Int>
+        self.measure {
+            self.result = sort.quickSort(array: &array) as NSArray
+        }
+        print(self.result)
+    }
+    
+    func testBucketSort() {
+        var array : Array<Int> = disorderArray as! Array<Int>
+        self.measure {
+            self.result = sort.bucketSort(array: &array, gap:10)
+        }
+        print(self.result)
+    }
+    
+    func testHeapSort() {
+        var array : Array<Int> = disorderArray as! Array<Int>
+        self.measure {
+            self.result = sort.HeapSort(array: &array)
+        }
+        print(self.result)
+    }
+    
+    func testCountingSort() {
+        var array : Array<Int> = disorderArray as! Array<Int>
+        self.measure {
+            self.result = sort.countingSort(array: &array)
+        }
+        print(self.result)
+    }
+    
+    
 }

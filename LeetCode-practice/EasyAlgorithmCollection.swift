@@ -8,10 +8,10 @@
 
 import UIKit
 
-class AlgorithmCollection:NSObject {
+class EasyAlgorithmCollection:NSObject {
     
-    private static let instance = AlgorithmCollection();
-    class var shardCollection: AlgorithmCollection {
+    private static let instance = EasyAlgorithmCollection();
+    class var shardCollection: EasyAlgorithmCollection {
         return instance;
     }
 
