@@ -13,7 +13,7 @@
 		9639F06C2140FC0000A7DD86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9639F06B2140FC0000A7DD86 /* Assets.xcassets */; };
 		9639F06F2140FC0000A7DD86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9639F06D2140FC0000A7DD86 /* LaunchScreen.storyboard */; };
 		9639F07A2140FC0000A7DD86 /* LeetCode_practiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9639F0792140FC0000A7DD86 /* LeetCode_practiceTests.swift */; };
-		9639F0932140FC3C00A7DD86 /* EasyAlgorithmCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9639F0922140FC3C00A7DD86 /* EasyAlgorithmCollection.swift */; };
+		9639F0932140FC3C00A7DD86 /* EasyAlgorithem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9639F0922140FC3C00A7DD86 /* EasyAlgorithem.swift */; };
 		969CB4C12160765C002B7CB9 /* SortAlgorithem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969CB4C02160765C002B7CB9 /* SortAlgorithem.swift */; };
 		969CB4C321607687002B7CB9 /* SortAlgorithemTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969CB4C221607687002B7CB9 /* SortAlgorithemTest.swift */; };
 		969CB4C52160BDE9002B7CB9 /* BinaryTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969CB4C42160BDE9002B7CB9 /* BinaryTree.swift */; };
@@ -49,7 +49,7 @@
 		9639F0792140FC0000A7DD86 /* LeetCode_practiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetCode_practiceTests.swift; sourceTree = "<group>"; };
 		9639F07B2140FC0000A7DD86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9639F0802140FC0000A7DD86 /* LeetCode-practiceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "LeetCode-practiceUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9639F0922140FC3C00A7DD86 /* EasyAlgorithmCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyAlgorithmCollection.swift; sourceTree = "<group>"; };
+		9639F0922140FC3C00A7DD86 /* EasyAlgorithem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyAlgorithem.swift; sourceTree = "<group>"; };
 		969CB4C02160765C002B7CB9 /* SortAlgorithem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortAlgorithem.swift; sourceTree = "<group>"; };
 		969CB4C221607687002B7CB9 /* SortAlgorithemTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortAlgorithemTest.swift; sourceTree = "<group>"; };
 		969CB4C42160BDE9002B7CB9 /* BinaryTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryTree.swift; sourceTree = "<group>"; };
@@ -107,7 +107,7 @@
 				9639F0662140FBFF00A7DD86 /* ViewController.swift */,
 				96B841142142126D0003302B /* LinkedList.swift */,
 				969CB4C42160BDE9002B7CB9 /* BinaryTree.swift */,
-				9639F0922140FC3C00A7DD86 /* EasyAlgorithmCollection.swift */,
+				9639F0922140FC3C00A7DD86 /* EasyAlgorithem.swift */,
 				969CB4C02160765C002B7CB9 /* SortAlgorithem.swift */,
 				9639F0682140FBFF00A7DD86 /* Main.storyboard */,
 				9639F06B2140FC0000A7DD86 /* Assets.xcassets */,
@@ -258,7 +258,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9639F0932140FC3C00A7DD86 /* EasyAlgorithmCollection.swift in Sources */,
+				9639F0932140FC3C00A7DD86 /* EasyAlgorithem.swift in Sources */,
 				969CB4C12160765C002B7CB9 /* SortAlgorithem.swift in Sources */,
 				969CB4C52160BDE9002B7CB9 /* BinaryTree.swift in Sources */,
 				9639F0672140FBFF00A7DD86 /* ViewController.swift in Sources */,

@@ -13,7 +13,7 @@ import XCTest
 
 class LeetCode_practiceTests: XCTestCase {
     
-    let leetCode = EasyAlgorithmCollection.shardCollection
+    let leetCode = EasyAlgorithem.shardCollection
     
     override func setUp() {
         super.setUp()

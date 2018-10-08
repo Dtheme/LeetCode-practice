@@ -4,14 +4,15 @@
 //
 //  Created by dzw on 2018/9/6.
 //  Copyright © 2018年 dzw. All rights reserved.
+//  入门以及简单级的题-题目均来自leetcode：https://leetcode-cn.com
 //
 
 import UIKit
 
-class EasyAlgorithmCollection:NSObject {
+class EasyAlgorithem:NSObject {
     
-    private static let instance = EasyAlgorithmCollection();
-    class var shardCollection: EasyAlgorithmCollection {
+    private static let instance = EasyAlgorithem();
+    class var shardCollection: EasyAlgorithem {
         return instance;
     }
 
