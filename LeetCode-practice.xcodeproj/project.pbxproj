@@ -17,7 +17,6 @@
 		9639F06A2140FBFF00A7DD86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9639F0682140FBFF00A7DD86 /* Main.storyboard */; };
 		9639F06C2140FC0000A7DD86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9639F06B2140FC0000A7DD86 /* Assets.xcassets */; };
 		9639F06F2140FC0000A7DD86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9639F06D2140FC0000A7DD86 /* LaunchScreen.storyboard */; };
-		9639F07A2140FC0000A7DD86 /* LeetCode_practiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9639F0792140FC0000A7DD86 /* LeetCode_practiceTests.swift */; };
 		969CB4C321607687002B7CB9 /* SortAlgorithemTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969CB4C221607687002B7CB9 /* SortAlgorithemTest.swift */; };
 /* End PBXBuildFile section */
 
@@ -52,7 +51,6 @@
 		9639F06E2140FC0000A7DD86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9639F0702140FC0000A7DD86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9639F0752140FC0000A7DD86 /* LeetCode-practiceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "LeetCode-practiceTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9639F0792140FC0000A7DD86 /* LeetCode_practiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetCode_practiceTests.swift; sourceTree = "<group>"; };
 		9639F07B2140FC0000A7DD86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9639F0802140FC0000A7DD86 /* LeetCode-practiceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "LeetCode-practiceUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		969CB4C221607687002B7CB9 /* SortAlgorithemTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortAlgorithemTest.swift; sourceTree = "<group>"; };
@@ -146,7 +144,6 @@
 		9639F0782140FC0000A7DD86 /* LeetCode-practiceTests */ = {
 			isa = PBXGroup;
 			children = (
-				9639F0792140FC0000A7DD86 /* LeetCode_practiceTests.swift */,
 				969CB4C221607687002B7CB9 /* SortAlgorithemTest.swift */,
 				96003FD4216C3A49005AD41E /* EasyAlgorithemTest.swift */,
 				9639F07B2140FC0000A7DD86 /* Info.plist */,
@@ -299,7 +296,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				96003FD5216C3A49005AD41E /* EasyAlgorithemTest.swift in Sources */,
-				9639F07A2140FC0000A7DD86 /* LeetCode_practiceTests.swift in Sources */,
 				969CB4C321607687002B7CB9 /* SortAlgorithemTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -59,7 +59,7 @@ class EasyAlgorithemTest: XCTestCase {
     }
     //MARK: -  罗马数字转整数
     func testRomanToInt() {
-        let result = leetcode_ez.romanToInt("IVCD")
+        let result = leetcode_ez.romanToInt("III")
         print(result)
     }
 }
