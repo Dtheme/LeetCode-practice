@@ -84,6 +84,7 @@ class EasyAlgorithem:NSObject {
     //MARK: -   整数反转
     /*
      给定一个 32 位有符号整数，将整数中的数字进行反转。
+     Int32.max值为214748367，Int32.min值为-2147483648
      */
     func reverse(_ x: Int) -> Int {
         var mx:Int = x
@@ -91,7 +92,6 @@ class EasyAlgorithem:NSObject {
         while (mx != 0){
             let pop:Int = mx % 10
             mx /= 10
-            //边界处理，Int32.max值为214748367，Int32.min值为-2147483648
             if (rev > Int32.max || ( rev == Int32.max && pop > 7)){
                 return 0
             }
@@ -109,8 +109,70 @@ class EasyAlgorithem:NSObject {
      输入: 121
      输出: true
      */
-    
+    func isPalindromeNumber(num: Int) -> Bool{
+        if num < 0 && (num % 10 == 0 && num != 0) {
+            return false
+        }
+        var reversed = 0, temp = num
+        while temp != 0 {
+            reversed = reversed * 10 + temp % 10
+            temp /= 10
+        }
+        return num == reversed || num == reversed/10
+    }
+    //MARK: -  罗马数字转整数
+    /*
+     罗马数字包含以下七种字符: I， V， X， L，C，D 和 M。给定一个罗马数字，将其转换成整数。输入确保在 1 到 3999 的范围内。
+     示例 :
+     输入: "III"
+     输出: 3
+     */
+    func romanToInt(_ s: String) -> Int {
+        if s.count == 0 {return 0}
+        var sum = 0
+        for i in 0 ..< s.count {
+            switch s[s.index(s.startIndex, offsetBy: i)] {
+            case "I":
+                sum += 1
+            case "V":
+                sum += 5
+                if i > 0 && s[s.index(s.startIndex, offsetBy: i - 1)] == "I" {
+                    sum -= 2
+                }
+            case "X":
+                sum += 10
+                if i > 0 && s[s.index(s.startIndex, offsetBy: i - 1)] == "I" {
+                    sum -= 2
+                }
+            case "L":
+                sum += 50
+                if i > 0 && s[s.index(s.startIndex, offsetBy: i - 1)] == "X" {
+                    sum -= 20
+                }
+            case "C":
+                sum += 100
+                if i > 0 && s[s.index(s.startIndex, offsetBy: i - 1)] == "X" {
+                    sum -= 20
+                }
+            case "D":
+                sum += 500
+                if i > 0 && s[s.index(s.startIndex, offsetBy: i - 1)] == "C" {
+                    sum -= 200
+                }
+            case "M":
+                sum += 1000
+                if i > 0 && s[s.index(s.startIndex, offsetBy: i - 1)] == "C" {
+                    sum -= 200
+                }
+            default :
+                sum += 0
+            }
+        }
+        return sum
+    }
 }
+
+
 
 
 

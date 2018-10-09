@@ -39,9 +39,28 @@ class EasyAlgorithemTest: XCTestCase {
     //MARK: - 两数之和
     func testTwoSum() {
         let result = leetcode_ez.twoSum([2, 7, 11, 15], 9)
-        print("------\([Int](result))")
+        print(([Int](result)))
     }
     
-//    addTwoNumbers(ListNode(2, ListNode(4, ListNode(3))), ListNode(5, ListNode(6, ListNode(4))))
-    func test(<#parameters#>) -> <#return type#>
+    //MARK: -  两数相加
+    func testAddTwoNumbers() {
+        let result = leetcode_ez.addTwoNumbers(ListNode(2, ListNode(4, ListNode(3))), ListNode(5, ListNode(6, ListNode(4))))
+        print(result.debugDescription)
+    }
+    //MARK: -  32位有符号整数翻转
+    func testReverse() {
+        let num = leetcode_ez.reverse(12321443)
+        print("\(num)")
+    }
+    //MARK: -  回文数
+    func testIsPalindromeNumber() {
+        let result = leetcode_ez.isPalindromeNumber(num: 876050678)
+        print(result)
+    }
+    //MARK: -  罗马数字转整数
+    func testRomanToInt() {
+        let result = leetcode_ez.romanToInt("IVCD")
+        print(result)
+    }
 }
+

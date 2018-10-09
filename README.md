@@ -9,11 +9,11 @@ LeetCode Practice code &amp;&amp; Commonly used sorting algorithms that uses swi
 
 ### 目前已有内容
 
-数据结构
+#### 数据结构
 
 - 链表
 
-排序算法：
+#### 排序算法：
 
 - 冒泡排序
 - 选择排序
@@ -25,10 +25,13 @@ LeetCode Practice code &amp;&amp; Commonly used sorting algorithms that uses swi
 - 堆排序
 - 计数排序
 
-leetcode题
+#### leetcode题
+
+##### 入门以及简单级题：
 
 - 两数之和
 - 两数相加
 - 整数翻转
-
+- 回文数
+- 罗马数字转整数
 后续继续学习过程中，会持续添加题目，如果你发现有什么问题或者错误，欢迎指出。
