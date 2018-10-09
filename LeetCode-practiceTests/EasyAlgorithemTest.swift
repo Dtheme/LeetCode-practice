@@ -1,19 +1,18 @@
 //
-//  LeetCode_practiceTests.swift
+//  EasyAlgorithemTest.swift
 //  LeetCode-practiceTests
 //
-//  Created by dzw on 2018/9/6.
+//  Created by dzw on 2018/10/9.
 //  Copyright © 2018年 dzw. All rights reserved.
+//  入门以及简单级难度题目测试
 //
-
 import XCTest
 
 @testable import LeetCode_practice
 
-
-class LeetCode_practiceTests: XCTestCase {
+class EasyAlgorithemTest: XCTestCase {
+    let leetcode_ez = EasyAlgorithem.shardCollection
     
-    let leetCode = EasyAlgorithem.shardCollection
     
     override func setUp() {
         super.setUp()
@@ -26,8 +25,8 @@ class LeetCode_practiceTests: XCTestCase {
     }
     
     func testExample() {
-        
-        
+        // This is an example of a functional test case.
+        // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
     
     func testPerformanceExample() {
@@ -37,6 +36,12 @@ class LeetCode_practiceTests: XCTestCase {
         }
     }
     
-  
+    //MARK: - 两数之和
+    func testTwoSum() {
+        let result = leetcode_ez.twoSum([2, 7, 11, 15], 9)
+        print("------\([Int](result))")
+    }
     
+//    addTwoNumbers(ListNode(2, ListNode(4, ListNode(3))), ListNode(5, ListNode(6, ListNode(4))))
+    func test(<#parameters#>) -> <#return type#>
 }
