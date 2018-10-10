@@ -3,6 +3,7 @@ LeetCode Practice code &amp;&amp; Commonly used sorting algorithms that uses swi
 
 ### 为什么写LeetCode-practice工程？
 
+记录基础的数据结构算法学习过程。
 感觉一直以来学习太过碎片化，所以在学习基础的数据结构和算法同时，把demo集中起来，尝试做一个稍微大块一点的碎片。
 
 所以初步的计划是先实现一些基础的也是应用最多的排序算法，然后在刷leetcode的过程中收集自己写的或者别人总结的算法的demo，主要是给自己做一个笔记，另外会实现一些系统没有直接提供但是可能会用到的经典的数据结构，当然，所有代码都是使用swift实现。学习过程中可能会有纰漏和错误，可能会存在细节问题，欢迎指正教导。
