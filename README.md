@@ -1,7 +1,7 @@
 # LeetCode-practice
 LeetCode Practice code &amp;&amp; Commonly used sorting algorithms that uses swift
 
-### 为什么要写LeetCode-practice工程？
+### 为什么写LeetCode-practice工程？
 
 感觉一直以来学习太过碎片化，所以在学习基础的数据结构和算法同时，把demo集中起来，尝试做一个稍微大块一点的碎片。
 
@@ -12,6 +12,7 @@ LeetCode Practice code &amp;&amp; Commonly used sorting algorithms that uses swi
 #### 数据结构
 
 - 链表
+- 栈
 
 #### 排序算法：
 
