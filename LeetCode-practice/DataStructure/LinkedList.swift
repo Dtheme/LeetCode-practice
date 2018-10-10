@@ -12,34 +12,98 @@ import UIKit
 class LinkedList: NSObject {
     var head:ListNode?
     var tail:ListNode?
-    
-    func appendToHead(value: Int) {
+    var count : Int {
+        get{
+            var node = head
+            var count = 0
+            while node != nil {
+                node = node!.next
+                count += 1
+            }
+            return count
+        }
+    }
+    public func appendToHead(value: ListNode) {
         if head == nil {
-            head = ListNode(value)
+            head = value
             tail = head
+            
         } else {
-            let temp = ListNode(value)
+            let temp = value
             temp.next = head
             head = temp
         }
     }
     
-    func appendToTail(value: Int) {
+
+    public func appendToTail(value: ListNode) {
         if tail == nil {
-            tail = ListNode(value)
+            tail = value
             head = tail
         } else {
-            tail!.next = ListNode(value)
+            tail!.next = value
             tail = tail!.next
         }
     }
+    
+    //MARK: -  通过index访问节点
+    public func nodeAt(index: Int) -> ListNode? {
+        if index >= 0 {
+            var node = head
+            var i = index
+            while node != nil {
+                if i == 0 {
+                    return node
+                }
+                i -= 1
+                node = node!.next
+            }
+        }
+        return nil
+    }
+    
+//    public func count() -> Int{
+//        var node = head
+//        var count = 0
+//        while node != nil {
+//            node = node!.next
+//            count += 1
+//        }
+//        return count
+//    }
+
+    //MARK: -  清空链表
+    public func removeAll() {
+        var next = head
+        while next != nil {
+            let tmp = next
+            next?.next = nil
+            next = tmp
+        }
+        head = nil
+        tail = nil
+    }
+    
+
+    override public var description: String {
+        var text = "["
+        var node = head
+        while node != nil {
+            text += "\(node!.value)"
+            node = node!.next
+            if node != nil { text += ", " }
+        }
+        return text + "]"
+    }
+
 }
 
+//MARK: -  增加打印信息
 class ListNode : CustomDebugStringConvertible{
-    var value:Int
+    var value:Any
     var next:ListNode?
     
-    init(_ value: Int = 0, _ next: ListNode? = nil) {
+    init(_ value: Any = 0, _ next: ListNode? = nil) {
         self.value = value
         self.next = nil
     }
@@ -52,5 +116,6 @@ class ListNode : CustomDebugStringConvertible{
         }
         return s
     }
+   
 }
 

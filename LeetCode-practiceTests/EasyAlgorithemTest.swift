@@ -49,7 +49,7 @@ class EasyAlgorithemTest: XCTestCase {
     }
     //MARK: -  32位有符号整数翻转
     func testReverse() {
-        let num = leetcode_ez.reverse(12321443)
+        let num = leetcode_ez.reverse(1534236469)
         print("\(num)")
     }
     //MARK: -  回文数
@@ -61,6 +61,27 @@ class EasyAlgorithemTest: XCTestCase {
     func testRomanToInt() {
         let result = leetcode_ez.romanToInt("III")
         print(result)
+    }
+    
+    //MARK: -  报数问题
+    func testCountToWin() {
+        let result = leetcode_ez.count2Win(queueLength: 100)
+        print(result)
+        
+    }
+    
+    //MARK: -  公共前缀
+    func testLongestCommonPrefix(){
+        let str = ["aflower","aflow","aflight"]
+        let result = leetcode_ez.longestCommonPrefix(str)
+        print(result)
+    }
+    
+    //MARK: -  有效括号
+    func testValidParentheses() {
+        let str = "{[]}"
+        let result = leetcode_ez.validParentheses(str: str)
+        print(result as Bool)
     }
 }
 

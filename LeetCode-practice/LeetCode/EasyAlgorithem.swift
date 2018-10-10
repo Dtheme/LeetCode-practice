@@ -57,23 +57,18 @@ class EasyAlgorithem:NSObject {
         var sum = 0
         
         while x != nil || y != nil {
-            // Sum
             sum /= 10
             if let _ = x {
-                sum += x!.value
+                sum += x!.value as! Int
                 x = x!.next
             }
             if let _ = y {
-                sum += y!.value
+                sum += y!.value as! Int
                 y = y!.next
             }
-            
-            // Move next
             current.next = ListNode(sum % 10)
             current = current.next!
         }
-        
-        // If the previous node is greater than 10
         if sum / 10 > 0 {
             current.next = ListNode(1)
         }
@@ -169,6 +164,91 @@ class EasyAlgorithem:NSObject {
             }
         }
         return sum
+    }
+    
+    //MARK: -  报数问题
+    /*
+     有100个人比赛，一排站着报数，奇数的就出局了，报完以后从头再来，最后一个是赢家，选几号站可以留到最后
+     假设有n个人呢？
+     解析：
+     第一次留偶数，2的倍数，第二次数再留偶数，也就是偶数中2的倍数也就是留4的倍数，依次数就是：
+     第一次剩下2的倍数，第二次剩下4的倍数，第三次剩下8的倍数，第四次剩下16的倍数，第五次剩下32的倍数，第六次剩下64。
+     第N轮留下2^n的倍数,如果队列长度是一个2的次方数那就是最后一个，否则就是小于它的最大2的次方数
+     转换成二进制问题：将这个数转换成二进制数，可以一目了然距离这个数最近的2个2的次方数，得到答案
+     */
+    func count2Win(queueLength:Int) -> Int{
+        let str = String(queueLength,radix:2)
+        let maxPower = str.count-1
+        if queueLength > 2<<maxPower {
+            return 2<<maxPower
+        }else{
+            return 2<<(maxPower-1)
+        }
+    }
+
+    //MARK: -  公共前缀
+    /*
+     编写一个函数来查找字符串数组中的最长公共前缀。
+     如果不存在公共前缀，返回空字符串 ""。
+     示例：
+     输入: ["flower","flow","flight"]
+     输出: "fl"
+     */
+    func longestCommonPrefix(_ strs: [String]) -> String {
+        let count = strs.count
+        if count == 0 {
+            return ""
+        }
+        if count == 1 {
+            return strs.first!
+        }
+        var result = strs.first!
+        for i in 1..<count {
+            while !strs[i].hasPrefix(result) {
+                result = String(result.prefix(result.count - 1))
+                if result.count == 0 {
+                    return ""
+                }
+            }
+        }
+        return result
+    }
+    //MARK: -  有效的括号
+    /*
+     给定一个只包括 '('，')'，'{'，'}'，'['，']' 的字符串，判断字符串是否有效。
+     有效字符串需满足：
+     左括号必须用相同类型的右括号闭合。
+     左括号必须以正确的顺序闭合。
+     注意空字符串可被认为是有效字符串。
+     示例
+     输入: "()"
+     输出: true
+     
+     输入: "(]"
+     输出: false
+     */
+    func validParentheses(str:String) -> Bool{
+        var bucket = Stack<Character>()
+        for c in str {
+            switch c {
+            case "{","[","(":
+                bucket.push(element: c)
+            case "}":
+                guard (!bucket.isEmpty() && bucket.pop() == "{") else {
+                    return false
+                }
+            case "]":
+                guard (!bucket.isEmpty() && bucket.pop() == "[") else {
+                    return false
+                }
+            case ")":
+                guard (!bucket.isEmpty() && bucket.pop() == "(") else {
+                    return false
+                }
+            default: break
+            }
+        }
+        return bucket.isEmpty();
     }
 }
 
