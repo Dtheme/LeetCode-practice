@@ -62,16 +62,6 @@ class LinkedList: NSObject {
         return nil
     }
     
-//    public func count() -> Int{
-//        var node = head
-//        var count = 0
-//        while node != nil {
-//            node = node!.next
-//            count += 1
-//        }
-//        return count
-//    }
-
     //MARK: -  清空链表
     public func removeAll() {
         var next = head
@@ -85,6 +75,7 @@ class LinkedList: NSObject {
     }
     
 
+    //MARK: -  打印内容
     override public var description: String {
         var text = "["
         var node = head
@@ -98,7 +89,8 @@ class LinkedList: NSObject {
 
 }
 
-//MARK: -  增加打印信息
+
+//MARK: -  节点
 class ListNode : CustomDebugStringConvertible{
     var value:Any
     var next:ListNode?
@@ -107,6 +99,7 @@ class ListNode : CustomDebugStringConvertible{
         self.value = value
         self.next = nil
     }
+    
     var debugDescription: String {
         var s = "\(value)"
         var p = self

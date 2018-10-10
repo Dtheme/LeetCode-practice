@@ -63,7 +63,7 @@ class DataStructureTest: XCTestCase {
         ll.head = node1
         ll.tail = node3
         //在尾节点再加一个
-        ll.appendToTail(value: ListNode("testAddTail",nil))
+        ll.appendToTail(value: ListNode("testAdd2Tail",nil))
         
         //访问第1个节点
         let nodeAt1 = ll.nodeAt(index: 1)!
