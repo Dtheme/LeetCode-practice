@@ -1,7 +1,7 @@
 # LeetCode-practice
 LeetCode Practice code &amp;&amp; Commonly used sorting algorithms that uses swift
 
-记录基础的数据结构算法学习过程。动手实现一些基本的数据。
+记录基础的数据结构算法学习过程。动手实现一些基本的数据结构以及leetcode题目的解答。
 
 初步的计划是先实现一些基础的也是应用最多的排序算法，然后在刷leetcode的过程中遇到数据结构，动手实现一些，主要是给自己做一个笔记，所有代码都是使用swift实现。
 
