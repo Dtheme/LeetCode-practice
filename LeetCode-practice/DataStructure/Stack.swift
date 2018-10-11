@@ -13,6 +13,12 @@ public struct Stack<T> {
     private var elements = [T]()
     public init() {}
     
+    public var count: Int {
+        get{
+            return self.elements.count
+        }
+    }
+    
     public mutating func pop() -> T? {
         return self.elements.popLast()
     }
@@ -33,9 +39,7 @@ public struct Stack<T> {
     }
     
     
-    public var count: Int {
-        return self.elements.count
-    }
+   
     
 }
 
@@ -53,7 +57,7 @@ extension Stack: CustomStringConvertible, CustomDebugStringConvertible {
 }
 
 
-//MARK: -  可以使用一个数组来初始化创建一个新栈
+//MARK: -  可以使用一个数组或者字面量来构造栈
 public struct ArrayIterator<T> : IteratorProtocol {
     var currentElement: [T]
     

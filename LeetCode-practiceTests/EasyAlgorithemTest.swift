@@ -83,5 +83,12 @@ class EasyAlgorithemTest: XCTestCase {
         let result = leetcode_ez.validParentheses(str: str)
         print(result as Bool)
     }
+    //MARK: -  二进制求和 （超大数字暂未通过测试，可能是实现方式不对？已经用Int64装了）
+    func testAddBinary() {
+        let a = "10100000100100110110010000010101111011011001101110111111111101000000101111001110001111100001101"
+        let b = "110101001011101110001111100110001010100001101011101010000011011011001011101111001100000011011110011"
+        let result = leetcode_ez.addBinary(a, b)
+        print(result)
+    }
 }
 

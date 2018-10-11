@@ -17,6 +17,8 @@
 		9639F06A2140FBFF00A7DD86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9639F0682140FBFF00A7DD86 /* Main.storyboard */; };
 		9639F06C2140FC0000A7DD86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9639F06B2140FC0000A7DD86 /* Assets.xcassets */; };
 		9639F06F2140FC0000A7DD86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9639F06D2140FC0000A7DD86 /* LaunchScreen.storyboard */; };
+		9662002A216EE956006298C2 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96620029216EE956006298C2 /* Queue.swift */; };
+		9662002C216F2146006298C2 /* CircularbufferQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9662002B216F2146006298C2 /* CircularbufferQueue.swift */; };
 		969CB4C321607687002B7CB9 /* SortAlgorithemTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969CB4C221607687002B7CB9 /* SortAlgorithemTest.swift */; };
 		96C70516216DA02C00F88B35 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C70515216DA02C00F88B35 /* Stack.swift */; };
 		96C70518216DCE8A00F88B35 /* DataStructureTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C70517216DCE8A00F88B35 /* DataStructureTest.swift */; };
@@ -55,6 +57,9 @@
 		9639F0752140FC0000A7DD86 /* LeetCode-practiceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "LeetCode-practiceTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9639F07B2140FC0000A7DD86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9639F0802140FC0000A7DD86 /* LeetCode-practiceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "LeetCode-practiceUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		96620029216EE956006298C2 /* Queue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
+		9662002B216F2146006298C2 /* CircularbufferQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularbufferQueue.swift; sourceTree = "<group>"; };
+		9662002D216F3975006298C2 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		969CB4C221607687002B7CB9 /* SortAlgorithemTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortAlgorithemTest.swift; sourceTree = "<group>"; };
 		96C70515216DA02C00F88B35 /* Stack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
 		96C70517216DCE8A00F88B35 /* DataStructureTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStructureTest.swift; sourceTree = "<group>"; };
@@ -90,6 +95,8 @@
 			children = (
 				96003FD7216C3C9C005AD41E /* LinkedList.swift */,
 				96C70515216DA02C00F88B35 /* Stack.swift */,
+				96620029216EE956006298C2 /* Queue.swift */,
+				9662002B216F2146006298C2 /* CircularbufferQueue.swift */,
 				96003FD8216C3C9C005AD41E /* BinaryTree.swift */,
 			);
 			path = DataStructure;
@@ -153,6 +160,7 @@
 				96003FD4216C3A49005AD41E /* EasyAlgorithemTest.swift */,
 				96C70517216DCE8A00F88B35 /* DataStructureTest.swift */,
 				9639F07B2140FC0000A7DD86 /* Info.plist */,
+				9662002D216F3975006298C2 /* README.md */,
 			);
 			path = "LeetCode-practiceTests";
 			sourceTree = "<group>";
@@ -289,8 +297,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				96003FDD216C3CD6005AD41E /* SortAlgorithem.swift in Sources */,
+				9662002C216F2146006298C2 /* CircularbufferQueue.swift in Sources */,
 				96003FDA216C3C9C005AD41E /* BinaryTree.swift in Sources */,
 				96C70516216DA02C00F88B35 /* Stack.swift in Sources */,
+				9662002A216EE956006298C2 /* Queue.swift in Sources */,
 				9639F0672140FBFF00A7DD86 /* ViewController.swift in Sources */,
 				9639F0652140FBFF00A7DD86 /* AppDelegate.swift in Sources */,
 				96003FE0216C3CFA005AD41E /* EasyAlgorithem.swift in Sources */,

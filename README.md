@@ -11,6 +11,8 @@ LeetCode Practice code &amp;&amp; Commonly used sorting algorithms that uses swi
 
 - 链表
 - 栈
+- 队列
+- 队列：环形缓冲区
 
 #### 排序算法：
 

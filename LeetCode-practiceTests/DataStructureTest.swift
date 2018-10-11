@@ -32,6 +32,11 @@ class DataStructureTest: XCTestCase {
         
         print("打印栈内容：\(astack.description)")
         
+        //支持for in
+        for ele in astack{
+            print("for-in support test：\(ele)")
+        }
+        
         let peak = astack.peek()!
         let lastP = astack.pop()!
         let count = astack.count
@@ -72,4 +77,49 @@ class DataStructureTest: XCTestCase {
         print(ll.debugDescription)
     }
     
+    //MARK: -  测试队列
+    func testQueue() {
+        //创建队列
+        var queue = Queue<Any>.init()
+        
+        //入队列
+        queue.enqueue(element: "testStr1")
+        queue.enqueue(element: "testStr2")
+        queue.enqueue(element: "testStr3")
+        queue.enqueue(element: 100)
+        queue.enqueue(element: NSNumber(value: true))
+        
+        //for in支持
+        for ele in queue{
+           print("for-in support test：\(ele)")
+        }
+        
+        let cap = queue.capacity
+        let count = queue.count
+        let peek = queue.peek()!
+        
+        print("打印队列内容：\(queue.debugDescription),队列容量：\(cap),元素个数:\(count),队列顶：\(peek)")
+        
+        let value = queue.dequeue()!
+        print("出队列的值：\(value)")
+        print("打印队列内容：\(queue.debugDescription),队列容量：\(cap),元素个数:\(count),队列顶：\(peek)")
+    }
+    //MARK: -  测试环形缓冲区
+    func testCircularbufferQueue() {
+        //构造一个环形缓存区
+        var queue =  CircularbufferQueue<String>(4)
+        queue.push(element: "test1")
+        queue.push(element: "test2")
+        queue.push(element: "test3")
+        queue.push(element: "test4")
+        print("环形缓冲区内容：\(queue.debugDescription)")
+        
+        //推出一个元素
+        let popObj = queue.pop()!
+        let peek = queue.peek()!
+        
+        print("推出的元素：\(popObj),顶部元素：\(peek),缓冲区内的数据个数：\(queue.count)")
+        _ = queue.pop()
+        print(queue.debugDescription)
+    }
 }
