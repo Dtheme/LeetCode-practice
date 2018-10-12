@@ -22,7 +22,7 @@ public struct Queue<T> {
     /// 容量
     public var capacity: Int {
         get {
-            return data.capacity
+            return Swift.max(data.capacity, 1)
         }
         set {
             data.reserveCapacity(newValue)
@@ -32,18 +32,15 @@ public struct Queue<T> {
     /// 构造方法
     public init() {}
 
-    
     /// element入队列
     public mutating func enqueue(element: T) {
         data.append(element)
     }
     
-    
     ///出队列 遵循先入先出
     public mutating func dequeue() -> T? {
         return data.removeFirst()
     }
-    
     
     /// 返回队列顶部元素 也就是出队列操作的第一个被移除元素
     public func peek() -> T? {
@@ -64,12 +61,10 @@ public struct Queue<T> {
     public func isEmpty() -> Bool {
         return data.isEmpty
     }
-    
 }
 
 //MARK: -  打印信息
 extension Queue: CustomStringConvertible, CustomDebugStringConvertible {
-    
     public var description: String {
         return data.description
     }
@@ -90,12 +85,12 @@ extension Queue: ExpressibleByArrayLiteral {
     public init(arrayLiteral elements: T...) {
         self.init(elements)
     }
-    
 }
+
 //MARK: -  允许使用forin循环迭代队列内容 时间复杂度： O(1).
 extension Queue: Sequence{
     public func makeIterator() -> AnyIterator<T> {
-        return AnyIterator(IndexingIterator(_elements: data.lazy))
+        return AnyIterator(IndexingIterator(_elements:data.lazy.reversed()))
     }
 }
 

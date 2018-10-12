@@ -122,4 +122,19 @@ class DataStructureTest: XCTestCase {
         _ = queue.pop()
         print(queue.debugDescription)
     }
+    
+    func testDeque() {
+        //创建一个Deque
+        var deque = Deque<Int>()
+        deque.enqueueHead(1)
+        deque.enqueueTail(99)
+        deque.enqueueHead(2)
+        deque.enqueueTail(100)
+        print("队列内容：\(deque.debugDescription)")
+        
+        //出队列
+        let headEle = deque.dequeueHead()!
+        let tailEle = deque.dequeueTail()!
+        print("头元素：\(String(headEle)),尾元素：\(String(tailEle)),队列内容：\(deque.debugDescription))" )
+    }
 }

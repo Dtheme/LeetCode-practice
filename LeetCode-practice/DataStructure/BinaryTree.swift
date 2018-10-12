@@ -52,6 +52,5 @@ class BinaryTree: NSObject {
                 createBinaryTree(value: value, treeModel: treeModel.rightTree!)
             }
         }
-    }
-    
+    }  
 }
