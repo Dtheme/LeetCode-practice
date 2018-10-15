@@ -11,9 +11,11 @@ LeetCode Practice code &amp;&amp; Commonly used sorting algorithms that uses swi
 
 - 链表
 - 栈
+- 最小值栈
 - 队列
 - 队列：环形缓冲区
 - 队列：双端队列
+
 
 #### 排序算法：
 
@@ -41,6 +43,7 @@ LeetCode Practice code &amp;&amp; Commonly used sorting algorithms that uses swi
 - 有效括号
 - 二进制求和
 - 加一
+-  盛水最多的容器
 
 
 后续继续学习过程中，会持续添加，学习过程中可能会有纰漏和错误，欢迎教导指正。

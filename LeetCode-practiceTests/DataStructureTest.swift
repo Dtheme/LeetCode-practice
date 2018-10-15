@@ -137,4 +137,45 @@ class DataStructureTest: XCTestCase {
         let tailEle = deque.dequeueTail()!
         print("头元素：\(String(headEle)),尾元素：\(String(tailEle)),队列内容：\(deque.debugDescription))" )
     }
+    
+    //MARK: -  测试最小值栈
+    func testMinStack() {
+        let minS =  MinStack()
+        minS.push(element: 100)
+        minS.push(element: 200)
+        minS.push(element: 1)
+        minS.push(element: 2189)
+        let result = minS.getMin()!
+        print("打印栈内容：\(minS.debugDescription),最小值：\(String(result)),栈顶：\(minS.peek()!)")
+    }
+    
+    //MARK: -  测试堆
+    func testHeap() {
+
+//        let ele = [2,3,4,5,6,7,8]
+        let ele = [12,35,7,15,2,3,8]
+
+        var maxheap = Heap<Int>(elements: ele) { (first, second) -> Bool in
+
+            return first > second
+        }
+        
+        let minHeap = Heap<Int>(elements: ele) { (first, second) -> Bool in
+            return first < second
+        }
+
+        let maxPeek = maxheap.peek()!
+        let minPeek = minHeap.peek()!
+        
+        print(maxheap.debugDescription)
+        print("大堆堆顶:\(maxPeek),小堆堆顶:\(minPeek)")
+        
+//        maxheap.enqueue(1)
+        let deq = maxheap.dequeue()
+        let _ = maxheap.dequeue()
+        
+        print(deq!)
+        print("大堆信息：\(maxheap.description)")
+    }
+    
 }

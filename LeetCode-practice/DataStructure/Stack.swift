@@ -29,12 +29,12 @@ public struct Stack<T> {
     }
     
     
-    public func peek() -> T? {
+    public  mutating func peek() -> T? {
         return self.elements.last
     }
     
     
-    public func isEmpty()-> Bool {
+    public mutating func isEmpty()-> Bool {
         return self.elements.isEmpty
     }    
 }

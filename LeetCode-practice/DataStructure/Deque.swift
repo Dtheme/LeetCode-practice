@@ -89,7 +89,6 @@ public struct Deque<T> {
     }
 }
 
-//MARK: -  打印信息
 extension Deque: CustomStringConvertible, CustomDebugStringConvertible {
     
     public var description: String {

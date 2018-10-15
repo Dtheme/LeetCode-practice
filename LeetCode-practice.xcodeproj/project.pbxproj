@@ -12,11 +12,13 @@
 		96003FDA216C3C9C005AD41E /* BinaryTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96003FD8216C3C9C005AD41E /* BinaryTree.swift */; };
 		96003FDD216C3CD6005AD41E /* SortAlgorithem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96003FDC216C3CD6005AD41E /* SortAlgorithem.swift */; };
 		96003FE0216C3CFA005AD41E /* EasyAlgorithem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96003FDF216C3CFA005AD41E /* EasyAlgorithem.swift */; };
+		960D517121744097006DA4AA /* MinStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960D517021744097006DA4AA /* MinStack.swift */; };
 		9639F0652140FBFF00A7DD86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9639F0642140FBFF00A7DD86 /* AppDelegate.swift */; };
 		9639F0672140FBFF00A7DD86 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9639F0662140FBFF00A7DD86 /* ViewController.swift */; };
 		9639F06A2140FBFF00A7DD86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9639F0682140FBFF00A7DD86 /* Main.storyboard */; };
 		9639F06C2140FC0000A7DD86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9639F06B2140FC0000A7DD86 /* Assets.xcassets */; };
 		9639F06F2140FC0000A7DD86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9639F06D2140FC0000A7DD86 /* LaunchScreen.storyboard */; };
+		965318F4217426D800138C2C /* Heap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965318F3217426D800138C2C /* Heap.swift */; };
 		9662002A216EE956006298C2 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96620029216EE956006298C2 /* Queue.swift */; };
 		9662002C216F2146006298C2 /* CircularbufferQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9662002B216F2146006298C2 /* CircularbufferQueue.swift */; };
 		969CB4C321607687002B7CB9 /* SortAlgorithemTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969CB4C221607687002B7CB9 /* SortAlgorithemTest.swift */; };
@@ -48,6 +50,7 @@
 		96003FD8216C3C9C005AD41E /* BinaryTree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BinaryTree.swift; sourceTree = "<group>"; };
 		96003FDC216C3CD6005AD41E /* SortAlgorithem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SortAlgorithem.swift; sourceTree = "<group>"; };
 		96003FDF216C3CFA005AD41E /* EasyAlgorithem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EasyAlgorithem.swift; sourceTree = "<group>"; };
+		960D517021744097006DA4AA /* MinStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinStack.swift; sourceTree = "<group>"; };
 		9639F0612140FBFF00A7DD86 /* LeetCode-practice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LeetCode-practice.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9639F0642140FBFF00A7DD86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9639F0662140FBFF00A7DD86 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +61,7 @@
 		9639F0752140FC0000A7DD86 /* LeetCode-practiceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "LeetCode-practiceTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9639F07B2140FC0000A7DD86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9639F0802140FC0000A7DD86 /* LeetCode-practiceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "LeetCode-practiceUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		965318F3217426D800138C2C /* Heap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Heap.swift; sourceTree = "<group>"; };
 		96620029216EE956006298C2 /* Queue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
 		9662002B216F2146006298C2 /* CircularbufferQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularbufferQueue.swift; sourceTree = "<group>"; };
 		9662002D216F3975006298C2 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
@@ -97,9 +101,11 @@
 			children = (
 				96003FD7216C3C9C005AD41E /* LinkedList.swift */,
 				96C70515216DA02C00F88B35 /* Stack.swift */,
+				960D517021744097006DA4AA /* MinStack.swift */,
 				96620029216EE956006298C2 /* Queue.swift */,
 				9662002B216F2146006298C2 /* CircularbufferQueue.swift */,
 				96C27EB4217077230073EA73 /* Deque.swift */,
+				965318F3217426D800138C2C /* Heap.swift */,
 				96003FD8216C3C9C005AD41E /* BinaryTree.swift */,
 			);
 			path = DataStructure;
@@ -309,6 +315,8 @@
 				96003FE0216C3CFA005AD41E /* EasyAlgorithem.swift in Sources */,
 				96C27EB5217077230073EA73 /* Deque.swift in Sources */,
 				96003FD9216C3C9C005AD41E /* LinkedList.swift in Sources */,
+				965318F4217426D800138C2C /* Heap.swift in Sources */,
+				960D517121744097006DA4AA /* MinStack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
