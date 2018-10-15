@@ -170,7 +170,7 @@ class DataStructureTest: XCTestCase {
         print(maxheap.debugDescription)
         print("大堆堆顶:\(maxPeek),小堆堆顶:\(minPeek)")
         
-//        maxheap.enqueue(1)
+
         let deq = maxheap.dequeue()
         let _ = maxheap.dequeue()
         
