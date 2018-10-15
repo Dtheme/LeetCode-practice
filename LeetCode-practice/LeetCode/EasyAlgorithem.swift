@@ -291,7 +291,29 @@ class EasyAlgorithem:NSObject {
         digits.insert(1, at: 0)
         return digits
     }
-    
+   
+    //MARK: -  盛最多水的容器
+
+    func maxArea(_ height: [Int]) -> Int {
+        var result = 0
+        var left = 0;
+        var right = height.count - 1;
+        
+        while left < right {
+            let valleft = height[left]
+            let valright = height[right]
+            let area = (valleft > valright ? valright : valleft) * (right - left)
+            if area > result {
+                result = area
+            }
+            if valleft > valright {
+                right -= 1
+            } else {
+                left += 1
+            }
+        }
+        return result
+    }
     
 }
 

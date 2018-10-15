@@ -36,11 +36,7 @@ public struct Stack<T> {
     
     public func isEmpty()-> Bool {
         return self.elements.isEmpty
-    }
-    
-    
-   
-    
+    }    
 }
 
 //MARK: -  打印栈信息

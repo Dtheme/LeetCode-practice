@@ -91,6 +91,7 @@ class EasyAlgorithemTest: XCTestCase {
         print(result)
     }
     
+    //MARK: -  加一
     func testPlusOne() {
         /// 输入: [1,2,3]
         /// 输出: [1,2,4]
@@ -98,6 +99,15 @@ class EasyAlgorithemTest: XCTestCase {
         let result = leetcode_ez.plusOne(digits)
         print(result)
         
+    }
+    
+    //MARK: -  盛最多水的容器
+    func testMaxArea() {
+        var result = 0;
+        self.measure {
+            result = leetcode_ez.maxArea([10,2,39,27,11,9,12,1,28])
+        }
+        print(result)
     }
 }
 
