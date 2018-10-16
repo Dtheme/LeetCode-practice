@@ -1,5 +1,7 @@
 # LeetCode-practice
-LeetCode Practice code &amp;&amp; Commonly used sorting algorithms that uses swift
+
+LeetCode Practice code, data structure, and Commonly used sorting algorithms that uses swift
+
 
 记录基础的数据结构算法学习过程。动手实现一些基本的数据结构以及leetcode题目的解答。
 
