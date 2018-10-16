@@ -17,6 +17,7 @@ LeetCode Practice code, data structure, and Commonly used sorting algorithms tha
 - 队列
 - 队列：环形缓冲区
 - 队列：双端队列
+- 队列：优先队列（堆）
 
 
 #### 排序算法：
