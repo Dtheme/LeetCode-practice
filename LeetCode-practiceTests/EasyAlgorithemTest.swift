@@ -109,5 +109,27 @@ class EasyAlgorithemTest: XCTestCase {
         }
         print(result)
     }
+    
+    //MARK: -  斐波那契数列求和
+    func testRotateArray() {
+        var result : NSArray = []
+        self.measure {
+            var arr = [21,6,29,12,36,85]
+            var k = 3
+            result = leetcode_ez.rotateArray(array: &arr, k: &k)
+        }
+         print(result)
+    }
+    
+    func testCheckPossibility() {
+        var result : Bool?
+        
+        self.measure {
+            var arr = [4,2,1]
+            result = leetcode_ez.checkPossibility(&arr)
+        }
+        print(result!)
+    }
+
 }
 

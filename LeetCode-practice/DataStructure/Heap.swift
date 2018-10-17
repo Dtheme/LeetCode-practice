@@ -4,7 +4,7 @@
 //
 //  Created by dzw on 2018/10/15.
 //  Copyright © 2018年 dzw. All rights reserved.
-//  堆
+//  堆（优先队列）
 //
 
 import UIKit
@@ -36,7 +36,6 @@ struct Heap<T> {
         createHeap()
     }
     
-
     
     private mutating func createHeap() {
         for index in (0 ..< count / 2).reversed() {
@@ -65,6 +64,9 @@ struct Heap<T> {
     
     ///当前节点的父节点
     func parentIndex(of index: Int) -> Int {
+        guard (index - 1)/2 >= 0  else {
+            return -1
+        }
         return (index - 1) / 2
     }
     

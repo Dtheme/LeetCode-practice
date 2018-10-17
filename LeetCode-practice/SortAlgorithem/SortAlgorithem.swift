@@ -24,7 +24,7 @@ class SortAlgorithem: NSObject {
      针对所有的元素重复以上的步骤，除了最后一个；
      重复步骤1~3，直到排序完成。
     */
-    func bubbleSort(array : NSArray) -> NSArray{
+    public func bubbleSort(array : NSArray) -> NSArray{
         let arr = NSMutableArray.init(array: array)
         for i in 0..<arr.count - 1 {
             for j in 0..<arr.count - 1 - i {
@@ -43,7 +43,7 @@ class SortAlgorithem: NSObject {
      n-1趟结束，数组有序化了。
      */
     
-    func selectionSort(array : NSMutableArray) -> NSArray{
+    public func selectionSort(array : NSMutableArray) -> NSArray{
         var minIndex : Int
         for i in 0..<array.count-1 {
            minIndex = i
@@ -68,7 +68,7 @@ class SortAlgorithem: NSObject {
      将新元素插入到该位置后；
      重复步骤2~5。
      */
-    func insertionSort(array : NSMutableArray) -> NSArray{
+    public func insertionSort(array : NSMutableArray) -> NSArray{
         var preIndex = 0
         var curValue = 0
         for i in 1..<array.count {
@@ -90,7 +90,7 @@ class SortAlgorithem: NSObject {
      按增量序列个数k，对序列进行k 趟排序；
      每趟排序，根据对应的增量ti，将待排序列分割成若干长度为m 的子序列，分别对各子表进行直接插入排序。仅增量因子为1 时，整个序列作为一个表来处理，表长度即为整个序列的长度。
      */
-    func shellSort(array : NSMutableArray) -> NSArray{
+    public func shellSort(array : NSMutableArray) -> NSArray{
         var distence = array.count/2
         while distence > 0 {
             for i in 0..<array.count{
@@ -119,7 +119,7 @@ class SortAlgorithem: NSObject {
      将两个排序好的子序列合并成一个最终的排序序列。
      */
     //左右归并
-    func mergeSort(array : [Int]) -> [Int]{
+    public func mergeSort(array : [Int]) -> [Int]{
         guard array.count > 1 else { return array }    // 1
         let middleIndex = array.count / 2              // 2
         let leftArray = mergeSort(array: Array(array[0..<middleIndex]))             // 3
@@ -168,7 +168,7 @@ class SortAlgorithem: NSObject {
      重新排序数列，所有元素比基准值小的摆放在基准前面，所有元素比基准值大的摆在基准的后面（相同的数可以到任一边）。在这个分区退出之后，该基准就处于数列的中间位置。这个称为分区（partition）操作；
      递归地（recursive）把小于基准值元素的子数列和大于基准值元素的子数列排序。
      */
-    func quickSort(array:inout Array<Int>) -> Array<Int> {
+    public func quickSort(array:inout Array<Int>) -> Array<Int> {
         var list =  array
         quickSortArray(array: &list, starIndex: 0, endIndex: array.count-1)
         return list
@@ -202,7 +202,7 @@ class SortAlgorithem: NSObject {
      对每个不是空的桶进行排序；
      从不是空的桶里把排好序的数据拼接起来。
      */
-    func bucketSort(array:inout Array<Int>,gap:NSInteger) -> NSArray{
+    public func bucketSort(array:inout Array<Int>,gap:NSInteger) -> NSArray{
         var min:Int = array[0]
         var max:Int = array[0]
         
@@ -269,7 +269,7 @@ class SortAlgorithem: NSObject {
      将堆顶元素R[1]与最后一个元素R[n]交换，此时得到新的无序区(R1,R2,……Rn-1)和新的有序区(Rn),且满足R[1,2…n-1]<=R[n]；
      由于交换后新的堆顶R[1]可能违反堆的性质，因此需要对当前无序区(R1,R2,……Rn-1)调整为新堆，然后再次将R[1]与无序区最后一个元素交换，得到新的无序区(R1,R2….Rn-2)和新的有序区(Rn-1,Rn)。不断重复此过程直到有序区的元素个数为n-1，则整个排序过程完成。
      */
-    func HeapSort(array:inout Array<Int>) -> NSArray {
+    public func HeapSort(array:inout Array<Int>) -> NSArray {
         //1.构建大顶堆
         for i in (0...(array.count/2-1)).reversed(){
             //从第一个非叶子结点从下至上，从右至左调整结构
@@ -312,7 +312,7 @@ class SortAlgorithem: NSObject {
      反向填充目标数组：将每个元素i放在新数组的第C(i)项，每放一个元素就将C(i)减去1
      这种方式适用于那种数组中的最大的那个数不大，但是数组中存在很多重复数据的情况
      */
-    func countingSort(array:inout [Int]) -> NSArray{
+    public func countingSort(array:inout [Int]) -> NSArray{
         var max:Int = array[0]
         
         for i in 0..<array.count {

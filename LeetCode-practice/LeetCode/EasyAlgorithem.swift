@@ -30,7 +30,7 @@ class EasyAlgorithem:NSObject {
     ///   - nums: 数组
     ///   - target: 目标数
     /// - Returns:  目标数的下标的元祖
-    func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
+    public func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
         let count = nums.count
         var tempDic = [Int:Int]();
         for i in 0..<count {
@@ -54,7 +54,7 @@ class EasyAlgorithem:NSObject {
     ///   - l1: 非空链表
     ///   - l2: 非空链表
     /// - Returns: 生成的链表
-    func addTwoNumbers(_ l1: ListNode?, _ l2: ListNode?) -> ListNode? {
+    public func addTwoNumbers(_ l1: ListNode?, _ l2: ListNode?) -> ListNode? {
         var x: ListNode? = l1
         var y: ListNode? = l2
         let dummy = ListNode()
@@ -85,7 +85,7 @@ class EasyAlgorithem:NSObject {
     /// 示例：给定一个 32 位有符号整数，将整数中的数字进行反转。Int32.max值为214748367，Int32.min值为-2147483648
     /// - Parameter x: 32位整形数
     /// - Returns: 反转后的整型数
-    func reverse(_ x: Int) -> Int {
+    public func reverse(_ x: Int) -> Int {
         var mx:Int = x
         var rev:Int = 0
         while (mx != 0){
@@ -108,7 +108,7 @@ class EasyAlgorithem:NSObject {
     /// 示例：123，6789876
     /// - Parameter num: Int数
     /// - Returns: YES：是回文数 NO：不是
-    func isPalindromeNumber(num: Int) -> Bool{
+    public func isPalindromeNumber(num: Int) -> Bool{
         if num < 0 && (num % 10 == 0 && num != 0) {
             return false
         }
@@ -127,7 +127,7 @@ class EasyAlgorithem:NSObject {
     /// 输出: 3
     /// - Parameter s: 罗马数字
     /// - Returns: 整数
-    func romanToInt(_ s: String) -> Int {
+    public func romanToInt(_ s: String) -> Int {
         if s.count == 0 {return 0}
         var sum = 0
         for i in 0 ..< s.count {
@@ -178,7 +178,7 @@ class EasyAlgorithem:NSObject {
     /// 解析：第一次留偶数，2的倍数，第二次数再留偶数，也就是偶数中2的倍数也就是留4的倍数，依次数就是：第一次剩下2的倍数，第二次剩下4的倍数，第三次剩下8的倍数，第四次剩下16的倍数，第五次剩下32的倍数，第六次剩下64。第N轮留下2^n的倍数,如果队列长度是一个2的次方数那就是最后一个，否则就是小于它的最大2的次方数,转换成二进制问题：将这个数转换成二进制数，可以一目了然距离这个数最近的2个2的次方数，得到答案
     /// - Parameter queueLength: 队伍长度
     /// - Returns: 应该站在第几位
-    func count2Win(queueLength:Int) -> Int{
+    public func count2Win(queueLength:Int) -> Int{
         let str = String(queueLength,radix:2)
         let maxPower = str.count-1
         if queueLength > 2<<maxPower {
@@ -194,7 +194,7 @@ class EasyAlgorithem:NSObject {
     /// 示例：输入: ["flower","flow","flight"] 输出: "fl"
     /// - Parameter strs: 字符串数组
     /// - Returns: 返回公共字符串，没有公共返回空字符串
-    func longestCommonPrefix(_ strs: [String]) -> String {
+    public func longestCommonPrefix(_ strs: [String]) -> String {
         let count = strs.count
         if count == 0 {
             return ""
@@ -219,7 +219,7 @@ class EasyAlgorithem:NSObject {
     ///
     /// - Parameter str: 字符串
     /// - Returns: YES:满足要求 NO：不满足要求
-    func validParentheses(str:String) -> Bool{
+    public func validParentheses(str:String) -> Bool{
         var bucket = Stack<Character>()
         for c in str {
             switch c {
@@ -249,7 +249,7 @@ class EasyAlgorithem:NSObject {
     ///   - a: 二级制数 a
     ///   - b: 二级制数 b
     /// - Returns: 求和后的二进制数 字符串
-    func addBinary(_ a: String, _ b: String) -> String {
+    public func addBinary(_ a: String, _ b: String) -> String {
         
         let DecimalA = self.binary2dec(num: a)
         let DecimalB = self.binary2dec(num: b)
@@ -274,7 +274,7 @@ class EasyAlgorithem:NSObject {
     /// 输入: [1,2,3]
     /// 输出: [1,2,4]
     /// 解释: 输入数组表示数字 123。
-    func plusOne(_ digits: [Int]) -> [Int] {
+    public func plusOne(_ digits: [Int]) -> [Int] {
         if digits.isEmpty {
             return digits
         }
@@ -297,7 +297,7 @@ class EasyAlgorithem:NSObject {
     ///说明：不能倾斜容器，且 n 的值至少为 2。
     ///示例：
 
-    func maxArea(_ height: [Int]) -> Int {
+    public func maxArea(_ height: [Int]) -> Int {
         var result = 0
         var left = 0;
         var right = height.count - 1;
@@ -316,6 +316,28 @@ class EasyAlgorithem:NSObject {
             }
         }
         return result
+    }
+    
+    
+    //MARK: -  翻转数组
+    /// 给定一个数组，将数组中的元素向右移动 k 个位置，其中 k 是非负数。
+    /// 输入: [1,2,3,4,5,6,7] 和 k = 3
+    /// 输出: [5,6,7,1,2,3,4]
+    /// 解释:
+    /// 向右旋转 1 步: [7,1,2,3,4,5,6]
+    /// 向右旋转 2 步: [6,7,1,2,3,4,5]
+    /// 向右旋转 3 步: [5,6,7,1,2,3,4]
+    public func rotateArray(array:inout [Int], k:inout Int) -> NSArray{
+        
+        assert(k <= array.count && k >= 0, "-rotateArray “k” Value error：k的值不能大于数组的容量")
+        
+        k = k % array.count
+        let result = NSMutableArray.init(array: array)
+        for i in 0..<array.count {
+            let index = (i + k) % array.count
+            result[index] = array[i]
+        }
+        return result.copy() as! NSArray
     }
     
 }

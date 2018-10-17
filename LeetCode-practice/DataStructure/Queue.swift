@@ -19,6 +19,7 @@ public struct Queue<T> {
             return data.count
         }
     }
+    
     /// 容量
     public var capacity: Int {
         get {

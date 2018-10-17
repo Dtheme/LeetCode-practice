@@ -3,7 +3,7 @@ LeetCode Practice code &amp;&amp; Commonly used sorting algorithms that uses swi
 
 记录基础的数据结构算法学习过程。动手实现一些基本的数据结构以及leetcode题目的解答。
 
-初步的计划是先实现一些基础的也是应用最多的排序算法，然后在刷leetcode的过程中遇到数据结构，动手实现一些，主要是给自己做一个笔记，所有代码都是使用swift实现。
+初步的计划是先实现一些基础的也是应用最多的排序算法，然后在刷leetcode的过程中遇到数据结构，动手实现一些，数据结构是单独实现，没有相互嵌套和复用，主要是给自己做一个笔记，所有代码都是使用swift实现。
 
 ### 目前已有内容
 
@@ -15,6 +15,8 @@ LeetCode Practice code &amp;&amp; Commonly used sorting algorithms that uses swi
 - 队列
 - 队列：环形缓冲区
 - 队列：双端队列
+- 二叉树
+- 二叉搜索树
 
 
 #### 排序算法：
