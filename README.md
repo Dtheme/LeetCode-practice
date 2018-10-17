@@ -1,5 +1,7 @@
 # LeetCode-practice
-LeetCode Practice code &amp;&amp; Commonly used sorting algorithms that uses swift
+
+LeetCode Practice code, data structure, and Commonly used sorting algorithms that uses swift
+
 
 记录基础的数据结构算法学习过程。动手实现一些基本的数据结构以及leetcode题目的解答。
 
@@ -10,12 +12,19 @@ LeetCode Practice code &amp;&amp; Commonly used sorting algorithms that uses swi
 #### 数据结构
 
 - 链表
+
 - 栈
+
 - 最小值栈
+
 - 队列
+
 - 队列：环形缓冲区
+
 - 队列：双端队列
+
 - 二叉树
+
 - 二叉搜索树
 
 
@@ -36,16 +45,29 @@ LeetCode Practice code &amp;&amp; Commonly used sorting algorithms that uses swi
 ##### 入门以及简单级题：
 
 - 两数之和
+
 - 两数相加
+
 - 整数翻转
+
 - 回文数
+
 - 罗马数字转整数
+
 - 排队问题
+
 - 公共前缀
+
 - 有效括号
+
 - 二进制求和
+
 - 加一
--  盛水最多的容器
+
+- 盛水最多的容器
+
+- 翻转数组
+
 
 
 后续继续学习过程中，会持续添加，学习过程中可能会有纰漏和错误，欢迎教导指正。
