@@ -110,7 +110,7 @@ class EasyAlgorithemTest: XCTestCase {
         print(result)
     }
     
-    //MARK: -  斐波那契数列求和
+    //MARK: -  翻转数组
     func testRotateArray() {
         var result : NSArray = []
         self.measure {
@@ -121,6 +121,6 @@ class EasyAlgorithemTest: XCTestCase {
          print(result)
     }
     
-
+ 
 }
 
