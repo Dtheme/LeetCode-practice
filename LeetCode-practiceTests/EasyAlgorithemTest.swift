@@ -121,15 +121,6 @@ class EasyAlgorithemTest: XCTestCase {
          print(result)
     }
     
-    func testCheckPossibility() {
-        var result : Bool?
-        
-        self.measure {
-            var arr = [4,2,1]
-            result = leetcode_ez.checkPossibility(&arr)
-        }
-        print(result!)
-    }
 
 }
 
