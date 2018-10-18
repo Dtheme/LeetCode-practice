@@ -121,6 +121,30 @@ class EasyAlgorithemTest: XCTestCase {
          print(result)
     }
     
- 
+    //MARK: -  二叉树的层平均值
+    func testAverageOfLevels() {
+        /*示例：已知下面的二叉树
+              3
+             / \
+            9  20
+               /  \
+              15   7
+         输出：分别是第0层，第1层，第2层的平均值 [3, 14.5, 11]
+         */
+        let node9 = BinarySearchTree(value: 9)
+        let node20 = BinarySearchTree(value: 20)
+        let node15 = BinarySearchTree(value: 15)
+        let node7 = BinarySearchTree(value: 7)
+        let rootNode = BinarySearchTree(value: 3, left: node9, right: node20, parent: nil)
+        node20.leftNode = node15
+        node20.rightNode = node7
+        
+        var result:[Double] = []
+        
+        self.measure {
+            result = leetcode_ez.averageOfLevels(rootNode)
+        }
+        print(result)
+    }
 }
 

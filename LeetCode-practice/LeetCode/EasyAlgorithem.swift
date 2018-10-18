@@ -340,6 +340,44 @@ class EasyAlgorithem:NSObject {
         return result.copy() as! NSArray
     }
     
+    //MARK: -  二叉树的层平均值
+    ///示例：已知下面的二叉树
+    ///     3 \n
+    ///    / \
+    ///   9  20
+    ///     /  \
+    ///    15   7
+    /// 输出：分别是第0层，第1层，第2层的平均值 [3, 14.5, 11]
+    ///
+    /// 实现方式：双端队列实现
+    /// - Parameter root: 传入指定的二叉树
+    /// - Returns: 返回存放各层的平均值的数组 [Double]
+    func averageOfLevels(_ root: BinarySearchTree<Int>?) -> [Double] {
+        let result :NSMutableArray = []
+        if root == nil {
+            return result as! [Double]
+        }
+        var deque = Deque<BinarySearchTree<Int>>()
+        deque.enqueueTail(root!)
+        while deque.isEmpty == false {
+            let size = deque.count
+            var sum = 0
+            for _ in 0..<size {
+                let node : BinarySearchTree = deque.dequeueHead()!
+                sum += node.value
+                if node.leftNode != nil{
+                    deque.enqueueTail(node.leftNode!)
+                }
+                if node.rightNode != nil{
+                    deque.enqueueTail(node.rightNode!)
+                }
+            }
+            let average : Double = Double(sum/size)
+            result.add(average)
+        }
+        return result.copy() as! [Double]
+    }
+    
 }
 
 
