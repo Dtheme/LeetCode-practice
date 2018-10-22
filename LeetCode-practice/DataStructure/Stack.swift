@@ -19,11 +19,15 @@ public struct Stack<T> {
         }
     }
     
+    /// 出栈
+    /// - Parameter element: 值：T
     public mutating func pop() -> T? {
         return self.elements.popLast()
     }
     
     
+    /// 入栈
+    /// - Parameter element: 值：T
     public mutating func push(element: T){
         self.elements.append(element)
     }

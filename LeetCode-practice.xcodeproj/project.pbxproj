@@ -21,6 +21,7 @@
 		965318F4217426D800138C2C /* Heap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965318F3217426D800138C2C /* Heap.swift */; };
 		9662002A216EE956006298C2 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96620029216EE956006298C2 /* Queue.swift */; };
 		9662002C216F2146006298C2 /* CircularbufferQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9662002B216F2146006298C2 /* CircularbufferQueue.swift */; };
+		9694B1A9217D6DC4006BB0DF /* RedblackTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9694B1A8217D6DC4006BB0DF /* RedblackTree.swift */; };
 		969CB4C321607687002B7CB9 /* SortAlgorithemTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969CB4C221607687002B7CB9 /* SortAlgorithemTest.swift */; };
 		96A39B382176CA3300A4924C /* BinarySearchTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A39B372176CA3300A4924C /* BinarySearchTree.swift */; };
 		96C27EB5217077230073EA73 /* Deque.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C27EB4217077230073EA73 /* Deque.swift */; };
@@ -66,6 +67,7 @@
 		96620029216EE956006298C2 /* Queue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
 		9662002B216F2146006298C2 /* CircularbufferQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularbufferQueue.swift; sourceTree = "<group>"; };
 		9662002D216F3975006298C2 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		9694B1A8217D6DC4006BB0DF /* RedblackTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedblackTree.swift; sourceTree = "<group>"; };
 		969CB4C221607687002B7CB9 /* SortAlgorithemTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortAlgorithemTest.swift; sourceTree = "<group>"; };
 		96A39B372176CA3300A4924C /* BinarySearchTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinarySearchTree.swift; sourceTree = "<group>"; };
 		96C27EB4217077230073EA73 /* Deque.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deque.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 				965318F3217426D800138C2C /* Heap.swift */,
 				96003FD8216C3C9C005AD41E /* BinaryTree.swift */,
 				96A39B372176CA3300A4924C /* BinarySearchTree.swift */,
+				9694B1A8217D6DC4006BB0DF /* RedblackTree.swift */,
 			);
 			path = DataStructure;
 			sourceTree = "<group>";
@@ -315,6 +318,7 @@
 				9662002A216EE956006298C2 /* Queue.swift in Sources */,
 				96A39B382176CA3300A4924C /* BinarySearchTree.swift in Sources */,
 				9639F0672140FBFF00A7DD86 /* ViewController.swift in Sources */,
+				9694B1A9217D6DC4006BB0DF /* RedblackTree.swift in Sources */,
 				9639F0652140FBFF00A7DD86 /* AppDelegate.swift in Sources */,
 				96003FE0216C3CFA005AD41E /* EasyAlgorithem.swift in Sources */,
 				96C27EB5217077230073EA73 /* Deque.swift in Sources */,

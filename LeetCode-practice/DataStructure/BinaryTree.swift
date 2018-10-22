@@ -10,28 +10,35 @@
 import UIKit
 
 
-class BinaryTree: NSObject {
+class BinaryTreeNode: NSObject {
     
-    public var leftNode :BinaryTree?
-    public var rightNode:BinaryTree?
+    public var leftNode :BinaryTreeNode?
+    public var rightNode:BinaryTreeNode?
     public var val:Int = 0
     
     /// 通过数组构造二叉树
     /// eg：let bTree = BinaryTree().createBinaryTree(array: arr)
     /// - Parameter array: 数组
     /// - Returns: 二叉树，数组第一个元素作为根节点
-    func createBinaryTree(array:[Int]) -> BinaryTree? {
+    func createBinaryTree(array:[Int]) -> BinaryTreeNode? {
         guard array.count > 0 else {return nil}
-        var rootNode:BinaryTree?
+        var rootNode:BinaryTreeNode?
         for value in array {
             rootNode = self.AddTreeNode(node: &rootNode,value)
         }
         return rootNode!
     }
     
-    @discardableResult func AddTreeNode(node: inout BinaryTree?, _ value:Int) -> BinaryTree {
+    
+    /// 添加一个节点
+    ///
+    /// - Parameters:
+    ///   - node: 父节点
+    ///   - value: 添加的节点值
+    /// - Returns: 新添加的节点
+    @discardableResult func AddTreeNode(node: inout BinaryTreeNode?, _ value:Int) -> BinaryTreeNode {
         if (node == nil) {
-            node = BinaryTree()
+            node = BinaryTreeNode()
             node?.val = value
         }else if (value < (node?.val)!) {
              AddTreeNode(node: &node!.leftNode, value)
@@ -42,7 +49,7 @@ class BinaryTree: NSObject {
     }
 }
 
-extension BinaryTree{
+extension BinaryTreeNode{
     ///深度
     func depth() -> Int {
         return 1 + max((leftNode != nil ? leftNode!.depth() : 0), (rightNode != nil ? rightNode!.depth() : 0))
@@ -65,27 +72,26 @@ extension BinaryTree{
     }
 }
 
+
 //MARK: -  反转
-extension BinaryTree {
+extension BinaryTreeNode {
     func reverse() {
         self.swapNode(left: &leftNode, right: &rightNode)
         leftNode?.reverse()
         rightNode?.reverse()
     }
-    private func swapNode(left:inout BinaryTree?,right: inout BinaryTree?) {
+    private func swapNode(left:inout BinaryTreeNode?,right: inout BinaryTreeNode?) {
         let rightNode = right
         right = left
         left = rightNode
-        
     }
 }
-
 
 
 ///遍历结果
 private var traverseReult : NSMutableArray = []
 
-extension BinaryTree {
+extension BinaryTreeNode {
     public func getInorderResult() -> NSMutableArray{
         traverseReult.removeAllObjects()
         self.inOrder()

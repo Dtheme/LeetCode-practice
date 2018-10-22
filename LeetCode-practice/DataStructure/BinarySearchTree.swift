@@ -18,23 +18,22 @@ enum traverseBinaryTreeType {
 
 private var traverseReult : NSMutableArray = []
 
-public class BinarySearchTree<T:Comparable> {
+public class BinarySearchTreeNode<T:Comparable> {
     
     public var value:T
-    public var leftNode:BinarySearchTree?
-    public var rightNode:BinarySearchTree?
-    public weak var parent:BinarySearchTree?
+    public var leftNode:BinarySearchTreeNode?
+    public var rightNode:BinarySearchTreeNode?
+    public weak var parent:BinarySearchTreeNode?
     
     
     /// 便利构造方法
-    ///
     /// - Parameter value: 节点值
     public convenience init(value: T) {
         self.init(value: value, left: nil, right: nil, parent:nil)
     }
     
-    public init(value:T, left:BinarySearchTree?, right:BinarySearchTree?,
-                parent:BinarySearchTree?) {
+    public init(value:T, left:BinarySearchTreeNode?, right:BinarySearchTreeNode?,
+                parent:BinarySearchTreeNode?) {
         self.value = value
         self.leftNode = left
         self.rightNode = right
@@ -52,7 +51,7 @@ public class BinarySearchTree<T:Comparable> {
             if let leftChild = leftNode {
                 leftChild.addNode(value: value)
             } else {
-                let newNode = BinarySearchTree(value: value)
+                let newNode = BinarySearchTreeNode(value: value)
                 newNode.parent = self
                 leftNode = newNode
             }
@@ -61,7 +60,7 @@ public class BinarySearchTree<T:Comparable> {
             if let rightChild = rightNode {
                 rightChild.addNode(value: value)
             } else {
-                let newNode = BinarySearchTree(value: value)
+                let newNode = BinarySearchTreeNode(value: value)
                 newNode.parent = self
                 rightNode = newNode
             }
@@ -74,67 +73,67 @@ public class BinarySearchTree<T:Comparable> {
     ///   - node: 遍历起始节点
     ///   - type: 遍历方式
     /// - Returns: 返回遍历结果数组
-    class func traverse(node:BinarySearchTree?,type:traverseBinaryTreeType) -> NSMutableArray{
+    class func traverse(node:BinarySearchTreeNode?,type:traverseBinaryTreeType) -> NSMutableArray{
 
         traverseReult.removeAllObjects()
 
         switch type {
         case .InOrder:
-            BinarySearchTree.inOrder(node: node)
+            BinarySearchTreeNode.inOrder(node: node)
             break
         case .PreOrder:
-            BinarySearchTree.preOrder(node: node)
+            BinarySearchTreeNode.preOrder(node: node)
             break
         case .PostOrder:
-            BinarySearchTree.postOrder(node: node)
+            BinarySearchTreeNode.postOrder(node: node)
             break
         case .BreadthFirst:
-            BinarySearchTree.breadthFirst(node: node)
+            BinarySearchTreeNode.breadthFirst(node: node)
             break
         }
 
         return traverseReult
     }
 
-    private class func inOrder(node:BinarySearchTree?) {
+    private class func inOrder(node:BinarySearchTreeNode?) {
 
         guard let node = node else {
             return
         }
 
-        BinarySearchTree.inOrder(node: node.leftNode)
+        BinarySearchTreeNode.inOrder(node: node.leftNode)
         traverseReult.add(node.value)
-        BinarySearchTree.inOrder(node: node.rightNode)
+        BinarySearchTreeNode.inOrder(node: node.rightNode)
         
     }
 
-    private class func preOrder(node:BinarySearchTree?) {
+    private class func preOrder(node:BinarySearchTreeNode?) {
         
         guard let node = node else {
             return
         }
         
         traverseReult.add(node.value)
-        BinarySearchTree.preOrder(node: node.leftNode)
-        BinarySearchTree.preOrder(node: node.rightNode)
+        BinarySearchTreeNode.preOrder(node: node.leftNode)
+        BinarySearchTreeNode.preOrder(node: node.rightNode)
         
     }
 
-    private class func postOrder(node:BinarySearchTree?) {
+    private class func postOrder(node:BinarySearchTreeNode?) {
         
         guard let node = node else {
             return
         }
         
-        BinarySearchTree.postOrder(node: node.leftNode)
-        BinarySearchTree.postOrder(node: node.rightNode)
+        BinarySearchTreeNode.postOrder(node: node.leftNode)
+        BinarySearchTreeNode.postOrder(node: node.rightNode)
         traverseReult.add(node.value)
         
     }
     //使用队列实现
-    private class func breadthFirst(node:BinarySearchTree?) {
+    private class func breadthFirst(node:BinarySearchTreeNode?) {
         if (node == nil) { return }
-        var queue = Queue<BinarySearchTree>()
+        var queue = Queue<BinarySearchTreeNode>()
         queue.enqueue(element: node!)
         while !queue.isEmpty() {
             let node = queue.dequeue()
@@ -178,9 +177,24 @@ public class BinarySearchTree<T:Comparable> {
     }
 }
 
+//MARK: -  反转
+extension BinarySearchTreeNode {
+    func reverse() {
+        self.swapNode(left: &leftNode, right: &rightNode)
+        leftNode?.reverse()
+        rightNode?.reverse()
+    }
+    private func swapNode(left:inout BinarySearchTreeNode?,right: inout BinarySearchTreeNode?) {
+        let rightNode = right
+        right = left
+        left = rightNode
+    }
+}
+
+
 //MARK: -  搜索、删除等操作
-extension BinarySearchTree{
-    public func search(value:T) -> BinarySearchTree? {
+extension BinarySearchTreeNode{
+    public func search(value:T) -> BinarySearchTreeNode? {
         if value == self.value {
             return self
         }
@@ -247,7 +261,7 @@ extension BinarySearchTree{
     }
     
 
-    private func connectParentTo(child:BinarySearchTree?) {
+    private func connectParentTo(child:BinarySearchTreeNode?) {
         guard let parent = self.parent else {
             child?.parent = self.parent
             return
@@ -284,7 +298,7 @@ extension BinarySearchTree{
     
     
     ///最小值节点
-    public func minimum() -> BinarySearchTree {
+    public func minimum() -> BinarySearchTreeNode {
         if let left = leftNode {
             return left.minimum()
         }else {
@@ -294,7 +308,7 @@ extension BinarySearchTree{
     
     
     ///最大值节点
-    public func maximum() -> BinarySearchTree {
+    public func maximum() -> BinarySearchTreeNode {
         if let right = rightNode {
             return right.maximum()
         }else {

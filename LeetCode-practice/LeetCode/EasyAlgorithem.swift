@@ -352,18 +352,18 @@ class EasyAlgorithem:NSObject {
     /// 实现方式：双端队列实现
     /// - Parameter root: 传入指定的二叉树
     /// - Returns: 返回存放各层的平均值的数组 [Double]
-    func averageOfLevels(_ root: BinarySearchTree<Int>?) -> [Double] {
+    func averageOfLevels(_ root: BinarySearchTreeNode<Int>?) -> [Double] {
         let result :NSMutableArray = []
         if root == nil {
             return result as! [Double]
         }
-        var deque = Deque<BinarySearchTree<Int>>()
+        var deque = Deque<BinarySearchTreeNode<Int>>()
         deque.enqueueTail(root!)
         while deque.isEmpty == false {
             let size = deque.count
             var sum = 0
             for _ in 0..<size {
-                let node : BinarySearchTree = deque.dequeueHead()!
+                let node : BinarySearchTreeNode = deque.dequeueHead()!
                 sum += node.value
                 if node.leftNode != nil{
                     deque.enqueueTail(node.leftNode!)

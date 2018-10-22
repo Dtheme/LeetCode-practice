@@ -182,7 +182,7 @@ class DataStructureTest: XCTestCase {
 
         //创建一般二叉树
         let arr = [1,2,3,4,5,6,7]
-        var bTree = BinaryTree().createBinaryTree(array: arr)
+        var bTree = BinaryTreeNode().createBinaryTree(array: arr)
         bTree?.AddTreeNode(node: &bTree, 100)
         bTree?.AddTreeNode(node: &bTree, 200)
         
@@ -201,7 +201,7 @@ class DataStructureTest: XCTestCase {
     
     func testBinarySearchTree(){
         //构造一个二叉搜索树
-        let rootNode = BinarySearchTree(value: 10)
+        let rootNode = BinarySearchTreeNode(value: 10)
         rootNode.addNode(value: 20)
         rootNode.addNode(value: 5)
         rootNode.addNode(value: 21)
@@ -210,20 +210,20 @@ class DataStructureTest: XCTestCase {
     
         
         //前序递归遍历
-        let resPreorder = BinarySearchTree.traverse(node: rootNode, type: .PreOrder)
+        let resPreorder = BinarySearchTreeNode.traverse(node: rootNode, type: .PreOrder)
         print("前序:\(resPreorder.debugDescription)")
         
         //中序递归遍历
-        let resInorder = BinarySearchTree.traverse(node: rootNode, type: .InOrder)
+        let resInorder = BinarySearchTreeNode.traverse(node: rootNode, type: .InOrder)
         print("中序:\(resInorder.debugDescription)")
 
         //后序递归遍历
-        let postPreorder = BinarySearchTree.traverse(node: rootNode, type: .PostOrder)
+        let postPreorder = BinarySearchTreeNode.traverse(node: rootNode, type: .PostOrder)
         print(postPreorder.debugDescription)
         print("后序:\(postPreorder.debugDescription)")
         
         //广度优先遍历
-        let BFTResult = BinarySearchTree.traverse(node: rootNode, type: .BreadthFirst)
+        let BFTResult = BinarySearchTreeNode.traverse(node: rootNode, type: .BreadthFirst)
         print(BFTResult.debugDescription)
         print("广度优先:\(BFTResult.debugDescription)")
         
@@ -258,9 +258,26 @@ class DataStructureTest: XCTestCase {
           / \
          4  nil
          */
-        let after_del = BinarySearchTree.traverse(node: rootNode, type: .InOrder)
+        let after_del = BinarySearchTreeNode.traverse(node: rootNode, type: .InOrder)
         print("删除后-中序遍历：\(after_del.debugDescription)")
         
         print(rootNode.depth() as Any)
+    }
+    
+    
+    //MARK: -  测试红黑树
+    func testRedBlackTree() {
+        let rootNode = RedBlackTreeNode.init(value: 10, nodeColor:.black)
+        rootNode.addNode(value: 12)
+        rootNode.addNode(value: 5)
+        rootNode.addNode(value: 3)
+        rootNode.addNode(value: 8)
+        rootNode.addNode(value: 30)
+        rootNode.addNode(value: 11)
+        rootNode.addNode(value: 32)
+        rootNode.addNode(value: 4)
+        rootNode.addNode(value: 2)
+
+        RedBlackTreeNode.description(nodes: [rootNode])
     }
 }

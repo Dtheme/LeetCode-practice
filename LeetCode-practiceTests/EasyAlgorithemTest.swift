@@ -120,11 +120,11 @@ class EasyAlgorithemTest: XCTestCase {
               15   7
          输出：分别是第0层，第1层，第2层的平均值 [3, 14.5, 11]
          */
-        let node9 = BinarySearchTree(value: 9)
-        let node20 = BinarySearchTree(value: 20)
-        let node15 = BinarySearchTree(value: 15)
-        let node7 = BinarySearchTree(value: 7)
-        let rootNode = BinarySearchTree(value: 3, left: node9, right: node20, parent: nil)
+        let node9 = BinarySearchTreeNode(value: 9)
+        let node20 = BinarySearchTreeNode(value: 20)
+        let node15 = BinarySearchTreeNode(value: 15)
+        let node7 = BinarySearchTreeNode(value: 7)
+        let rootNode = BinarySearchTreeNode(value: 3, left: node9, right: node20, parent: nil)
         node20.leftNode = node15
         node20.rightNode = node7
         
