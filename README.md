@@ -29,6 +29,7 @@ LeetCode Practice code, data structure, and Commonly used sorting algorithms tha
 
 - 红黑树
 
+- AVLTree
 
 #### 排序算法：
 
