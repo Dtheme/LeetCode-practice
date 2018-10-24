@@ -279,5 +279,31 @@ class DataStructureTest: XCTestCase {
         rootNode.addNode(value: 2)
 
         RedBlackTreeNode.description(nodes: [rootNode])
+        
+    }
+    
+    //MARK: -  AVLTree
+    func testAVLTree() {
+        let avlRootNode = AVLTreeNode.init(value: 100)
+        avlRootNode.addNode(value: 50)
+        avlRootNode.addNode(value: 200)
+        avlRootNode.addNode(value: 150)
+        avlRootNode.addNode(value: 125)
+        avlRootNode.addNode(value: 250)
+        
+        avlRootNode.balanceFactor = 2
+        avlRootNode.rightChild?.balanceFactor = -1
+        avlRootNode.rightChild?.rightChild?.balanceFactor = 0
+        
+        avlRootNode.rightChild?.leftChild?.balanceFactor = -1
+        avlRootNode.rightChild?.leftChild?.leftChild?.balanceFactor = 0
+        avlRootNode.leftChild?.balanceFactor = 0
+        
+        print("Invalid AVL tree")
+        AVLTreeNode.printTree(nodes: [avlRootNode])
+        
+        //深度优先遍历
+        print("深度优先遍历：Valid AVL tree")
+        AVLTreeNode.printTree(nodes: [avlRootNode])
     }
 }

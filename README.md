@@ -27,6 +27,8 @@ LeetCode Practice code, data structure, and Commonly used sorting algorithms tha
 
 - 二叉搜索树
 
+- 红黑树
+
 
 #### 排序算法：
 

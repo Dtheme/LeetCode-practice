@@ -31,13 +31,13 @@ public class RedBlackTreeNode<T:Comparable> {
     public weak var parent:RedBlackTreeNode?
 
     public var nodeColor:TreeNodeColor
-    
+
     ///遍历构造方法
     public convenience init(value: T ,nodeColor: TreeNodeColor) {
         self.init(value: value, left: nil, right: nil, parent:nil,
                   nodeColor: TreeNodeColor.black)
     }
-    
+
     public init(value:T, left:RedBlackTreeNode?,
                 right:RedBlackTreeNode?, parent:RedBlackTreeNode?,
                 nodeColor:TreeNodeColor) {
@@ -47,8 +47,8 @@ public class RedBlackTreeNode<T:Comparable> {
         self.rightNode = right
         self.parent = parent
     }
-    
-    
+
+
     /// - Returns: 返回祖父节点，如果没有返回nil
     public func grandParentNode() -> RedBlackTreeNode? {
         guard let grandParentNode = self.parent?.parent else {
@@ -56,23 +56,23 @@ public class RedBlackTreeNode<T:Comparable> {
         }
         return grandParentNode
     }
-    
-    
+
+
     /// - Returns: 返回父节点同级的其他节点（“叔叔”节点）
     public func uncleNode() -> RedBlackTreeNode? {
         guard let grandParent = self.grandParentNode() else {
             return nil
         }
-        
+
         if parent === grandParent.leftNode {
             return grandParent.rightNode
         }else {
             return grandParent.leftNode
         }
     }
-    
-    
-    
+
+
+
     //MARK: 旋转
     // 左旋示例：
     //           3                                        10
@@ -84,28 +84,28 @@ public class RedBlackTreeNode<T:Comparable> {
         guard let parent = parent else {
             return
         }
-        
+
         let grandParent = parent.parent
         let newLeftNodesRightNode = self.leftNode
         var wasLeftNode = false
         if parent === grandParent?.leftNode {
             wasLeftNode = true
         }
-        
+
         self.leftNode = parent
         self.leftNode?.parent = self
-        
+
         self.parent = grandParent
         if wasLeftNode {
             grandParent?.leftNode = self
         }else {
             grandParent?.rightNode = self
         }
-        
+
         self.leftNode?.rightNode = newLeftNodesRightNode
         self.leftNode?.rightNode?.parent = self.leftNode
     }
-    
+
     //右旋
     //           10                                    3
     //         /    \                                 /   \
@@ -116,28 +116,28 @@ public class RedBlackTreeNode<T:Comparable> {
         guard let parent = parent else {
             return
         }
-        
+
         let grandParent = parent.parent
         let newRightNodesLeftNode = self.rightNode
         var wasLeftChild = false
         if parent === grandParent?.leftNode {
             wasLeftChild = true
         }
-        
+
         self.rightNode = parent
         self.leftNode?.parent = self
-        
+
         self.parent = grandParent
         if wasLeftChild {
             grandParent?.rightNode = self
         }else {
             grandParent?.rightNode = self
         }
-        
+
         self.rightNode?.leftNode = newRightNodesLeftNode
         self.rightNode?.leftNode?.parent = self.rightNode
     }
- 
+
 }
 
 
@@ -146,7 +146,7 @@ extension RedBlackTreeNode {
 
     func addNode(value:T) {
         if value < self.value {
-            
+
             if let leftChild = leftNode {
                 leftChild.addNode(value: value)
             } else {
@@ -154,12 +154,12 @@ extension RedBlackTreeNode {
                 newNode.parent = self
                 newNode.nodeColor = TreeNodeColor.red
                 leftNode = newNode
-                
+
                 insertionStep1 (node: newNode)
-                
+
             }
         } else {
-            
+
             if let rightChild = rightNode {
                 rightChild.addNode(value: value)
             } else {
@@ -167,15 +167,15 @@ extension RedBlackTreeNode {
                 newNode.parent = self
                 newNode.nodeColor = TreeNodeColor.red
                 rightNode = newNode
-                
+
                 insertionStep1(node: newNode)
-                
+
             }
         }
     }
-    
-    
-    
+
+
+
     //1.处理根节点：先当前添加的节点是第一个，所以作为根节点，更新颜色为黑色
     private func insertionStep1(node:RedBlackTreeNode) {
         if let _ = node.parent {
@@ -190,11 +190,11 @@ extension RedBlackTreeNode {
         if node.parent?.nodeColor == .black {
             return
         }
-        
+
         insertionStep3(node: node)
-        
+
     }
-    
+
     //3.检查父节点和父节点同层节点是否为红色
     private func insertionStep3(node:RedBlackTreeNode) {
         if let uncle = node.uncleNode() {
@@ -208,11 +208,11 @@ extension RedBlackTreeNode {
                 return
             }
         }
-        
+
         insertionStep4(node: node)
-        
+
     }
-    
+
     //4.有一种可能性需要处理
     //        Granfather（黑）                                   Granfather（黑）
     //         /          \                                      /           \
@@ -234,12 +234,12 @@ extension RedBlackTreeNode {
             node.parent?.rotateRight()
             node = node.rightNode!
         }
-        
+
         insertionStep5(node: node)
-        
+
     }
-    
-    
+
+
     //5.到这里得到下面的树，现在要把它变成有效树，颜色有问题，改正
     //        Granfather（黑）
     //         /          \
@@ -263,7 +263,7 @@ extension RedBlackTreeNode {
 
 //MARK: -  打印树的内容（层次遍历节点值和颜色）
 extension RedBlackTreeNode{
-    
+
     /// 树信息
     ///
     /// - Parameter nodes: 打印nodes节点树信息

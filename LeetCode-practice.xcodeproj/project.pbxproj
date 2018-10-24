@@ -13,6 +13,7 @@
 		96003FDD216C3CD6005AD41E /* SortAlgorithem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96003FDC216C3CD6005AD41E /* SortAlgorithem.swift */; };
 		96003FE0216C3CFA005AD41E /* EasyAlgorithem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96003FDF216C3CFA005AD41E /* EasyAlgorithem.swift */; };
 		960D517121744097006DA4AA /* MinStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960D517021744097006DA4AA /* MinStack.swift */; };
+		9612539F218008F900B4609C /* AVLTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9612539E218008F900B4609C /* AVLTree.swift */; };
 		9639F0652140FBFF00A7DD86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9639F0642140FBFF00A7DD86 /* AppDelegate.swift */; };
 		9639F0672140FBFF00A7DD86 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9639F0662140FBFF00A7DD86 /* ViewController.swift */; };
 		9639F06A2140FBFF00A7DD86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9639F0682140FBFF00A7DD86 /* Main.storyboard */; };
@@ -53,6 +54,7 @@
 		96003FDC216C3CD6005AD41E /* SortAlgorithem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SortAlgorithem.swift; sourceTree = "<group>"; };
 		96003FDF216C3CFA005AD41E /* EasyAlgorithem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EasyAlgorithem.swift; sourceTree = "<group>"; };
 		960D517021744097006DA4AA /* MinStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinStack.swift; sourceTree = "<group>"; };
+		9612539E218008F900B4609C /* AVLTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVLTree.swift; sourceTree = "<group>"; };
 		9639F0612140FBFF00A7DD86 /* LeetCode-practice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LeetCode-practice.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9639F0642140FBFF00A7DD86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9639F0662140FBFF00A7DD86 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				96003FD8216C3C9C005AD41E /* BinaryTree.swift */,
 				96A39B372176CA3300A4924C /* BinarySearchTree.swift */,
 				9694B1A8217D6DC4006BB0DF /* RedblackTree.swift */,
+				9612539E218008F900B4609C /* AVLTree.swift */,
 			);
 			path = DataStructure;
 			sourceTree = "<group>";
@@ -320,6 +323,7 @@
 				9639F0672140FBFF00A7DD86 /* ViewController.swift in Sources */,
 				9694B1A9217D6DC4006BB0DF /* RedblackTree.swift in Sources */,
 				9639F0652140FBFF00A7DD86 /* AppDelegate.swift in Sources */,
+				9612539F218008F900B4609C /* AVLTree.swift in Sources */,
 				96003FE0216C3CFA005AD41E /* EasyAlgorithem.swift in Sources */,
 				96C27EB5217077230073EA73 /* Deque.swift in Sources */,
 				96003FD9216C3C9C005AD41E /* LinkedList.swift in Sources */,
