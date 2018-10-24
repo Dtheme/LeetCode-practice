@@ -378,6 +378,30 @@ class EasyAlgorithem:NSObject {
         return result.copy() as! [Double]
     }
     
+    //MARK: -  移动零
+    ///给定一个数组 nums，编写一个函数将所有 0 移动到数组的末尾，同时保持非零元素的相对顺序。
+    /// 示例:
+    /// 输入: [0,1,0,3,12]
+    /// 输出: [1,3,12,0,0]
+    func moveZeroes(_ nums: inout [Int]) -> [Int] {
+        var index1 = 0
+        var index2 = nums.count
+        while index1 <= index2 - 1 {
+            if nums[index1] == 0 {
+                for _ in 0..<(index2-index1) {
+                    index2 -= 1
+                    if nums[index2] != 0 {
+                        nums.remove(at: index1)
+                        nums.append(0)
+                        break;
+                    }
+                }
+            }else {
+                index1 += 1
+            }
+        }
+        return nums
+    }
 }
 
 

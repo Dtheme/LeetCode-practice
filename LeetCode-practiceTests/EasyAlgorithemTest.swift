@@ -135,5 +135,15 @@ class EasyAlgorithemTest: XCTestCase {
         }
         print(result)
     }
+
+    //MARK: -  移动0
+    func testMoveZero() {
+        var arr = [0,1,0,3,12]
+        var result:[Int] = [];
+        self.measure {
+            result = leetcode_ez.moveZeroes(&arr)
+        }
+        print(result)
+    }
 }
 
