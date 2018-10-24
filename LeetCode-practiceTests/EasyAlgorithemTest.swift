@@ -145,5 +145,6 @@ class EasyAlgorithemTest: XCTestCase {
         }
         print(result)
     }
+
 }
 

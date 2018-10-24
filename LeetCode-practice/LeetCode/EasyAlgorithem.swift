@@ -402,6 +402,9 @@ class EasyAlgorithem:NSObject {
         }
         return nums
     }
+    
+
+    
 }
 
 
