@@ -145,6 +145,34 @@ class EasyAlgorithemTest: XCTestCase {
         }
         print(result)
     }
+    
+    func testMaxProfit() {
+
+        var arr = [7,1,5,3,6,4]
+        var result = 0
+        self.measure {
+            result = leetcode_ez.maxProfit(prices: &arr)
+        }
+        print(result)
+    }
+    
+    func testMaxProfitII() {
+        var result = 0
+        let arr = [7,1,5,3,6,4]
+        self.measure {
+            result = leetcode_ez.maxProfitII(arr)
+        }
+        print(result)
+    }
+
+    func testMaxProfitIII() {
+        var result = 0
+        var arr = [3,3,5,0,0,3,1,4]
+        self.measure {
+            result = leetcode_ez.maxProfitIII(prices: &arr)
+        }
+        print(result)
+    }
 
 }
 

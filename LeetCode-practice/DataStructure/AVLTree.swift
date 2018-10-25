@@ -11,7 +11,7 @@
 //  2.树中的每一个左子树和右子树都是AVL树
 //  3.每个节点都有一个平衡因子，任一节点的平衡因子是-1或0或1.（每个节点的平衡因子等于右子树的高度减去左子树的高度，即：bf = rightHeigh - leftHeight）
 
-import UIKit
+import Foundation
 
 public class AVLTreeNode<T:Comparable> {
     

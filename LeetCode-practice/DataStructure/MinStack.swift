@@ -7,7 +7,7 @@
 //  最小值栈
 //
 
-import UIKit
+import Foundation
 
 class MinStack {
     

@@ -7,7 +7,7 @@
 //  环形缓冲区（队列）
 //  
 
-import UIKit
+import Foundation
 
 public enum CircularBufferOperation {
     case Ignore, Overwrite

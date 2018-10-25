@@ -7,7 +7,7 @@
 //  链表
 //
 
-import UIKit
+import Foundation
 
 class LinkedList: NSObject {
     var head:ListNode?

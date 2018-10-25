@@ -7,7 +7,7 @@
 //  栈
 //
 
-import UIKit
+import Foundation
 
 public struct Stack<T> {
     private var elements = [T]()

@@ -17,7 +17,7 @@
 //  删除：平均时间复杂度，最坏情况时间复杂度 O(log(n))
 //  空间复杂度：平均时间复杂度，最坏情况时间复杂度 O(n)
 
-import UIKit
+import Foundation
 
 public enum TreeNodeColor : Int {
     case red = 0

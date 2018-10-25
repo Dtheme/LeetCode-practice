@@ -7,7 +7,7 @@
 //  双端队列
 //
 
-import UIKit
+import Foundation
 
 public struct Deque<T> {
     

@@ -380,6 +380,7 @@ class EasyAlgorithem:NSObject {
     
     //MARK: -  移动零
     ///给定一个数组 nums，编写一个函数将所有 0 移动到数组的末尾，同时保持非零元素的相对顺序。
+    ///
     /// 示例:
     /// 输入: [0,1,0,3,12]
     /// 输出: [1,3,12,0,0]
@@ -404,7 +405,75 @@ class EasyAlgorithem:NSObject {
     }
     
 
+    //MARK: -  买卖股票的最佳时机
+    /// 给定一个数组，它的第 i 个元素是一支给定股票第 i 天的价格。 如果你最多只允许完成一笔交易（即买入和卖出一支股票），设计一个算法来计算你所能获取的最大利润。 注意你不能在买入股票前卖出股票。
+    ///
+    /// 示例 1:
+    /// 输入: [7,1,5,3,6,4]
+    /// 输出: 5
+    ///
+    /// 解释: 在第 2 天（股票价格 = 1）的时候买入，在第 5 天（股票价格 = 6）的时候卖出，最大利润 = 6-1 = 5 。注意利润不能是 7-1 = 6, 因为卖出价格需要大于买入价格。
+    func maxProfit(prices: inout [Int]) -> Int {
+        var maxP = 0
+        guard prices.count > 1 else { return 0 }
+        var minP = prices[0]
+        for i in 0..<prices.count {
+            maxP = max(maxP, prices[i]-minP)
+            minP = min(minP, prices[i])
+        }
+        return maxP
+        
+    }
     
+    //MARK: -  买卖股票的最佳时机 II
+    ///给定一个数组，它的第 i 个元素是一支给定股票第 i 天的价格。设计一个算法来计算你所能获取的最大利润。你可以尽可能地完成更多的交易（多次买卖一支股票）。注意：你不能同时参与多笔交易（你必须在再次购买前出售掉之前的股票）。
+    ///
+    /// 示例 1:
+    ///
+    /// 输入: [7,1,5,3,6,4]
+    /// 输出: 7
+    ///
+    /// 解释: 在第 2 天（股票价格 = 1）的时候买入，在第 3 天（股票价格 = 5）的时候卖出, 这笔交易所能获得利润 = 5-1 = 4 。随后，在第 4 天（股票价格 = 3）的时候买入，在第 5 天（股票价格 = 6）的时候卖出, 这笔交易所能获得利润 = 6-3 = 3 。
+    func maxProfitII(_ prices: [Int]) -> Int {
+        var max = 0
+        
+        guard prices.count > 1 else { return 0 }
+        
+        for i in 1..<prices.count where prices[i] > prices[i - 1] {
+            max += prices[i] - prices[i - 1]
+        }
+        return max
+    }
+    
+    //MARK: -  买卖股票的最佳时期III
+    ///给定一个数组，它的第 i 个元素是一支给定的股票在第 i 天的价格。设计一个算法来计算你所能获取的最大利润。你最多可以完成 两笔 交易。注意: 你不能同时参与多笔交易（你必须在再次购买前出售掉之前的股票）。
+    ///
+    /// 示例 1:
+    ///
+    /// 输入: [3,3,5,0,0,3,1,4]
+    /// 输出: 6
+    /// 解释: 在第 4 天（股票价格 = 0）的时候买入，在第 6 天（股票价格 = 3）的时候卖出，这笔交易所能获得利润 = 3-0 = 3 。随后，在第 7 天（股票价格 = 1）的时候买入，在第 8 天 （股票价格 = 4）的时候卖出，这笔交易所能获得利润 = 4-1 = 3 。
+    func maxProfitIII(prices:inout[Int]) -> Int {
+        
+        guard prices.count >= 1 else { return 0 }
+        
+        var global = Array.init(repeating: 0, count: 3)
+        var local = Array.init(repeating: 0, count: 3)
+        
+        for i in 0..<prices.count-1 {
+            
+            let diff = prices[i+1] - prices[i]
+            
+            for j in (1...2).reversed(){
+                local[j] = max(global[j-1] + max(diff, 0), local[j] + diff)
+                global[j] = max(local[j], global[j])
+            }
+            
+        }
+        
+        return global[2]
+        
+    }
 }
 
 

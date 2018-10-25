@@ -8,7 +8,7 @@
 
 //
 
-import UIKit
+import Foundation
 
 public struct Queue<T> {
     private var data = [T]()

@@ -7,7 +7,7 @@
 //  二叉搜索树
 //
 
-import UIKit
+import Foundation
 
 enum traverseBinaryTreeType {
     case InOrder          //中序递归遍历

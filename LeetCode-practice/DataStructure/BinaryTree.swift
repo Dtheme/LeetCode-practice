@@ -7,7 +7,7 @@
 //  最简单的二叉树
 //
 
-import UIKit
+import Foundation
 
 
 class BinaryTreeNode: NSObject {

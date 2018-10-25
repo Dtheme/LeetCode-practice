@@ -7,7 +7,7 @@
 //  堆（优先队列）
 //
 
-import UIKit
+import Foundation
 
 struct Heap<T> {
     
