@@ -540,6 +540,8 @@ class EasyAlgorithem:NSObject {
         }
         return ans
     }
+    
+    
         
 }
 
