@@ -474,6 +474,65 @@ class EasyAlgorithem:NSObject {
         return global[2]
         
     }
+    
+    //MARK: -  只出现一次的数字I
+    ///给定一个非空整数数组，除了某个元素只出现一次以外，其余每个元素均出现两次。找出那个只出现了一次的元素。
+    ///
+    /// 说明：你的算法应该具有线性时间复杂度。 你可以不使用额外空间来实现吗？
+    ///
+    /// 示例 1:
+    ///
+    /// 输入: [2,2,1]
+    /// 输出: 1
+     func singleNumber(_ nums: [Int]) -> Int {
+        var result = 0
+        for num in nums {
+            result ^= num
+        }
+        return result
+    }
+    
+    //MARK: -  只出现一次的数字II
+    ///给定一个非空整数数组，除了某个元素只出现一次以外，其余每个元素均出现了三次。找出那个只出现了一次的元素。
+    ///
+    ///说明：你的算法应该具有线性时间复杂度。 你可以不使用额外空间来实现吗？
+    ///
+    /// 示例 1:
+    ///
+    /// 输入: [2,2,3,2]
+    /// 输出: 3
+    func singleNumberII(_ nums: [Int]) -> Int {
+        var result = 0
+        for i in 0..<32 {
+            var count = 0;
+            for j in 0..<nums.count{
+                count+=(nums[j]>>i)&1
+            }
+            result += (count % 3)<<i
+        }
+        return result
+    }
+    
+    func singleNumberIII(_ nums: [Int]) -> [Int] {
+        
+        var ans : [Int] = [0,0]
+        var ele = 0
+        for i in 0..<nums.count {
+            ele ^= nums[i]
+        }
+        
+        ele &= -ele
+        
+        for j in 0..<nums.count{
+            if (nums[j] & ele) != 0{
+                ans[0] ^= nums[j]
+            }else{
+                ans[1] ^= nums[j]
+            }
+        }
+        return ans
+    }
+        
 }
 
 

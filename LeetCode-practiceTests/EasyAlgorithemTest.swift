@@ -174,5 +174,37 @@ class EasyAlgorithemTest: XCTestCase {
         print(result)
     }
 
+    func testSingleNumber() {
+        var result = 0
+        let arr = [4,1,2,1,2,9,9]
+        
+        self.measure {
+            result = leetcode_ez.singleNumber(arr)
+        }
+
+        print(result)
+    }
+    
+    func testSingleNumberII() {
+        var result = 0
+        let arr = [2,2,3,2,98,98,98,12,12,12]
+        
+        self.measure {
+            result = leetcode_ez.singleNumberII(arr)
+        }
+        
+        print(result)
+    }
+    
+    func testSingleNumberIII() {
+        var result :[Int] = []
+        let arr = [1,2,1,3,2,5]
+        
+        self.measure {
+            result = leetcode_ez.singleNumberIII(arr)
+        }
+        
+        print(result)
+    }
 }
 
