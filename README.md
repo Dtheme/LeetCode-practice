@@ -7,6 +7,14 @@ LeetCode Practice code, data structure, and Commonly used sorting algorithms tha
 
 初步的计划是先实现一些基础的也是应用最多的排序算法，然后在刷leetcode的过程中遇到数据结构，动手实现一些，数据结构是单独实现，没有相互嵌套和复用，主要是给自己做一个笔记，所有代码都是使用swift实现。
 
+#### 推荐
+
+[算法可视化网站](https://visualgo.net/en)
+
+[Swift Algorithm Club ---raywenderlich](https://www.raywenderlich.com/library?domain_ids%5B%5D=1&q=Swift+Algorithm+Club&sort_order=relevance)
+
+[shenjie1993的gitbook：leetcode部分题目解题思路](https://shenjie1993.gitbooks.io/leetcode-python/content/096%20Unique%20Binary%20Search%20Trees.html)
+
 ### 目前已有内容
 
 #### 数据结构
@@ -69,4 +77,5 @@ LeetCode Practice code, data structure, and Commonly used sorting algorithms tha
 - 只出现一次的数字III
 
 
-后续继续学习过程中，会持续添加，学习过程中可能会有纰漏和错误，欢迎教导指正。
+
+> 期待你的加入。
