@@ -307,6 +307,31 @@ class DataStructureTest: XCTestCase {
         AVLTreeNode.printTree(nodes: [avlRootNode])
     }
     
+    func testLRUCache() {
+        
+        //构造一个容量为5的缓存池
+        let cachePool = LURCache.init(cacheSize: 5)
+        
+        //插入5个数据
+        cachePool.put(key: "a", value: 21)
+        cachePool.put(key: "b", value: 43)
+        cachePool.put(key: "c", value: 64)
+        cachePool.put(key: "d", value: 34)
+        cachePool.put(key: "e", value: 87)
+        
+        //打印缓存池内容
+        print(cachePool.debugDescription)
+        
+        //再插入一个数据
+        cachePool.put(key: "f", value: 76)
+        //由于满了 会从尾部数据移除一个，打印内容
+        print(cachePool.debugDescription)
+        
+        //根据key查找值
+        let value = cachePool.get(key: "e")
+        print(value!)
+        
+    }
     
     
 }

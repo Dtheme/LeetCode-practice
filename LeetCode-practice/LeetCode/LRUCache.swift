@@ -40,12 +40,12 @@ fileprivate class LRUCacheNode {
     var next: LRUCacheNode?
     var value: Any?
     var key = ""
-    deinit{
-        print("\(self.key) is die")
-    }
+//    deinit{
+//        print("\(self.key) ")
+//    }
 }
 
-class LURCache {
+public class LURCache {
     private var cacheSize = 0
     lazy private var nodes :[String: LRUCacheNode] = [:]
     private var currentSize = 0
@@ -55,7 +55,7 @@ class LURCache {
     /// 构造方法
     ///
     /// - Parameter cacheSize: 缓存池的大小
-    init(cacheSize :Int){
+    public init(cacheSize :Int){
         self.cacheSize = cacheSize
     }
     
@@ -64,7 +64,7 @@ class LURCache {
     ///
     /// - Parameter key: type:String
     /// - Returns: 存储的值
-    func get(key : String) -> Any? {
+    public func get(key : String) -> Any? {
         let referenceNode = nodes[key]
         move2Head(node: referenceNode)
         return referenceNode?.value
@@ -76,7 +76,7 @@ class LURCache {
     /// - Parameters:
     ///   - key: type：String
     ///   - value: type：Any
-    func put(key: String , value: Any){
+    public func put(key: String , value: Any){
         var referenceNode = nodes[key]
         if nil == referenceNode {
             if currentSize >= cacheSize {
@@ -169,3 +169,21 @@ class LURCache {
         }
     }
 }
+
+extension LURCache : CustomDebugStringConvertible{
+    public var debugDescription: String{
+        var text = "key-value:\n{\n";
+        var node = head
+        while node != nil {
+            let key = node?.key
+            let value = node?.value
+            text += "\(key!): \(value!)"
+            node = node?.next
+            if node != nil {text += ",\n"}
+        }
+        return text + "\n}"
+    }
+    
+}
+
+//var cachePool = LURCache.init(cacheSize: 100)
