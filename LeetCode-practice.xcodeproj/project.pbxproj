@@ -18,6 +18,7 @@
 		9639F06A2140FBFF00A7DD86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9639F0682140FBFF00A7DD86 /* Main.storyboard */; };
 		9639F06C2140FC0000A7DD86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9639F06B2140FC0000A7DD86 /* Assets.xcassets */; };
 		9639F06F2140FC0000A7DD86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9639F06D2140FC0000A7DD86 /* LaunchScreen.storyboard */; };
+		96427D262188284E000DA88C /* LRUCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96427D252188284E000DA88C /* LRUCache.swift */; };
 		965318F4217426D800138C2C /* Heap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965318F3217426D800138C2C /* Heap.swift */; };
 		9662002A216EE956006298C2 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96620029216EE956006298C2 /* Queue.swift */; };
 		9662002C216F2146006298C2 /* CircularbufferQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9662002B216F2146006298C2 /* CircularbufferQueue.swift */; };
@@ -56,6 +57,7 @@
 		9639F06B2140FC0000A7DD86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9639F06E2140FC0000A7DD86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9639F0702140FC0000A7DD86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96427D252188284E000DA88C /* LRUCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LRUCache.swift; sourceTree = "<group>"; };
 		965318F3217426D800138C2C /* Heap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Heap.swift; sourceTree = "<group>"; };
 		96620029216EE956006298C2 /* Queue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
 		9662002B216F2146006298C2 /* CircularbufferQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularbufferQueue.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				96003FDF216C3CFA005AD41E /* EasyAlgorithem.swift */,
+				96427D252188284E000DA88C /* LRUCache.swift */,
 			);
 			path = LeetCode;
 			sourceTree = "<group>";
@@ -279,6 +282,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96427D262188284E000DA88C /* LRUCache.swift in Sources */,
 				96003FDD216C3CD6005AD41E /* SortAlgorithem.swift in Sources */,
 				9662002C216F2146006298C2 /* CircularbufferQueue.swift in Sources */,
 				96003FDA216C3C9C005AD41E /* BinaryTree.swift in Sources */,

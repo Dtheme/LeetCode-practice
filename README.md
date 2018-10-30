@@ -55,6 +55,9 @@ LeetCode Practice code, data structure, and Commonly used sorting algorithms tha
 - 堆排序
 - 计数排序
 
+#### 常用
+- LRU缓存淘汰算法
+
 #### leetcode题
 
 ##### 入门以及简单级题：

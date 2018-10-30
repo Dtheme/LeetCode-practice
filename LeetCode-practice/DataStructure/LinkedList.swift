@@ -10,6 +10,7 @@
 import Foundation
 
 class LinkedList: NSObject {
+   
     var head:ListNode?
     var tail:ListNode?
     var count : Int {
@@ -42,6 +43,7 @@ class LinkedList: NSObject {
             head = tail
         } else {
             tail!.next = value
+            tail = value.pre
             tail = tail!.next
         }
     }
@@ -94,6 +96,7 @@ class LinkedList: NSObject {
 class ListNode : CustomDebugStringConvertible{
     var value:Any
     var next:ListNode?
+    var pre:ListNode?
     
     init(_ value: Any = 0, _ next: ListNode? = nil) {
         self.value = value
