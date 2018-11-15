@@ -254,7 +254,7 @@ class EasyAlgorithemTest: XCTestCase {
     func testRestoreIpAddresses() {
         var result : [String] = []
         self.measure  {
-            result =  leetcode_ez.restoreIpAddresses("25525511135");
+            result = leetcode_ez.restoreIpAddresses("25525511135");
         }
         print(result);
     }
