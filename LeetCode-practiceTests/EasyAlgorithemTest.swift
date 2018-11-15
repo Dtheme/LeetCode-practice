@@ -146,6 +146,7 @@ class EasyAlgorithemTest: XCTestCase {
         print(result)
     }
     
+    //MARK: -  买卖股票的最佳时期
     func testMaxProfit() {
 
         var arr = [7,1,5,3,6,4]
@@ -205,6 +206,57 @@ class EasyAlgorithemTest: XCTestCase {
         }
         
         print(result)
+    }
+    
+    //MARK: -  打家劫舍
+    func testRobI() {
+        var result = 0
+        let arr = [1,2,3,1]
+        self.measure {
+            result = leetcode_ez.rob(arr)
+        }
+        print("result:\(result)")
+    }
+    
+    func testRobII() {
+        var result = 0
+        let arr = [2,3,2]
+        self.measure {
+            result = leetcode_ez.robII(arr)
+        }
+        print("result:\(result)")
+    }
+    
+//    func testRobIII(){
+//
+//
+//        // 构造一个二叉树
+//        //       3
+//        //      / \
+//        //     2   3
+//        //      \   \
+//        //       1   3
+//        let rootNode = BinaryTreeNode(value: 3)
+//        rootNode.addNode(value: 2)
+//        rootNode.addNode(value: 3)
+//        rootNode.addNode(value: 3)
+//        rootNode.addNode(value: 1)
+//        var result = 0
+//
+//        print(rootNode.getInorderResult())
+//        self.measure {
+//            result = leetcode_ez.robIII(rootNode)
+//        }
+//        print(result)
+//    }
+ 
+//MARK: -  复原IP地址
+    func testRestoreIpAddresses() {
+        var result : [String] = []
+        self.measure  {
+            result =  leetcode_ez.restoreIpAddresses("25525511135");
+        }
+        print(result);
     }
 }
 

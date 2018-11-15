@@ -181,22 +181,24 @@ class DataStructureTest: XCTestCase {
     func testBinaryTree() {
 
         //创建一般二叉树
-        let arr = [1,2,3,4,5,6,7]
-        var bTree = BinaryTreeNode().createBinaryTree(array: arr)
-        bTree?.AddTreeNode(node: &bTree, 100)
-        bTree?.AddTreeNode(node: &bTree, 200)
+        let rootNode = BinaryTreeNode(value: 1)
+        rootNode.addNode(value: 100)
+        rootNode.addNode(value: 125)
+        rootNode.addNode(value: 291)
+        rootNode.addNode(value: 98)
+        rootNode.addNode(value: 64)
         
         //前序遍历
-        let res1 = bTree?.getInorderResult()
-        print(res1!)
+        let res1 = rootNode.getInorderResult()
+        print(res1)
         //翻转
-        bTree?.reverse()
+        rootNode.reverse()
 
         //前序遍历
-        let res2 = bTree?.getInorderResult()
-        print(res2!)
+        let res2 = rootNode.getInorderResult()
+        print(res2)
 
-        
+
     }
     
     func testBinarySearchTree(){

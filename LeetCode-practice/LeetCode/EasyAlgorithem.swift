@@ -352,7 +352,7 @@ class EasyAlgorithem:NSObject {
     /// 实现方式：双端队列实现
     /// - Parameter root: 传入指定的二叉树
     /// - Returns: 返回存放各层的平均值的数组 [Double]
-    func averageOfLevels(_ root: BinarySearchTreeNode<Int>?) -> [Double] {
+    public func averageOfLevels(_ root: BinarySearchTreeNode<Int>?) -> [Double] {
         let result :NSMutableArray = []
         if root == nil {
             return result as! [Double]
@@ -384,7 +384,7 @@ class EasyAlgorithem:NSObject {
     /// 示例:
     /// 输入: [0,1,0,3,12]
     /// 输出: [1,3,12,0,0]
-    func moveZeroes(_ nums: inout [Int]) -> [Int] {
+    public func moveZeroes(_ nums: inout [Int]) -> [Int] {
         var index1 = 0
         var index2 = nums.count
         while index1 <= index2 - 1 {
@@ -413,7 +413,7 @@ class EasyAlgorithem:NSObject {
     /// 输出: 5
     ///
     /// 解释: 在第 2 天（股票价格 = 1）的时候买入，在第 5 天（股票价格 = 6）的时候卖出，最大利润 = 6-1 = 5 。注意利润不能是 7-1 = 6, 因为卖出价格需要大于买入价格。
-    func maxProfit(prices: inout [Int]) -> Int {
+    public func maxProfit(prices: inout [Int]) -> Int {
         var maxP = 0
         guard prices.count > 1 else { return 0 }
         var minP = prices[0]
@@ -434,7 +434,7 @@ class EasyAlgorithem:NSObject {
     /// 输出: 7
     ///
     /// 解释: 在第 2 天（股票价格 = 1）的时候买入，在第 3 天（股票价格 = 5）的时候卖出, 这笔交易所能获得利润 = 5-1 = 4 。随后，在第 4 天（股票价格 = 3）的时候买入，在第 5 天（股票价格 = 6）的时候卖出, 这笔交易所能获得利润 = 6-3 = 3 。
-    func maxProfitII(_ prices: [Int]) -> Int {
+    public func maxProfitII(_ prices: [Int]) -> Int {
         var max = 0
         
         guard prices.count > 1 else { return 0 }
@@ -453,7 +453,7 @@ class EasyAlgorithem:NSObject {
     /// 输入: [3,3,5,0,0,3,1,4]
     /// 输出: 6
     /// 解释: 在第 4 天（股票价格 = 0）的时候买入，在第 6 天（股票价格 = 3）的时候卖出，这笔交易所能获得利润 = 3-0 = 3 。随后，在第 7 天（股票价格 = 1）的时候买入，在第 8 天 （股票价格 = 4）的时候卖出，这笔交易所能获得利润 = 4-1 = 3 。
-    func maxProfitIII(prices:inout[Int]) -> Int {
+    public func maxProfitIII(prices:inout[Int]) -> Int {
         
         guard prices.count >= 1 else { return 0 }
         
@@ -484,7 +484,7 @@ class EasyAlgorithem:NSObject {
     ///
     /// 输入: [2,2,1]
     /// 输出: 1
-     func singleNumber(_ nums: [Int]) -> Int {
+    public func singleNumber(_ nums: [Int]) -> Int {
         var result = 0
         for num in nums {
             result ^= num
@@ -501,7 +501,7 @@ class EasyAlgorithem:NSObject {
     ///
     /// 输入: [2,2,3,2]
     /// 输出: 3
-    func singleNumberII(_ nums: [Int]) -> Int {
+    public func singleNumberII(_ nums: [Int]) -> Int {
         var result = 0
         for i in 0..<32 {
             var count = 0;
@@ -521,7 +521,7 @@ class EasyAlgorithem:NSObject {
     ///
     /// 输入: [1,2,1,3,2,5]
     /// 输出: [3,5]
-    func singleNumberIII(_ nums: [Int]) -> [Int] {
+    public func singleNumberIII(_ nums: [Int]) -> [Int] {
         
         var ans : [Int] = [0,0]
         var ele = 0
@@ -541,11 +541,110 @@ class EasyAlgorithem:NSObject {
         return ans
     }
     
-    
+    //MARK: -  打家劫舍I
+    /// 你是一个专业的小偷，计划偷窃沿街的房屋。每间房内都藏有一定的现金，影响你偷窃的唯一制约因素就是相邻的房屋装有相互连通的防盗系统，如果两间相邻的房屋在同一晚上被小偷闯入，系统会自动报警。给定一个代表每个房屋存放金额的非负整数数组，计算你在不触动警报装置的情况下，能够偷窃到的最高金额。
+    ///
+    /// 示例 1:
+    ///
+    /// 输入: [1,2,3,1]
+    /// 输出: 4
+    /// 解释: 偷窃 1 号房屋 (金额 = 1) ，然后偷窃 3 号房屋 (金额 = 3)。
+    /// 偷窃到的最高金额 = 1 + 3 = 4 。
+    ///
+    /// - Parameter nums: 数组
+    /// - Returns: 偷窃到的最大金额
+    public func rob(_ nums: [Int]) -> Int {
         
+        if nums.count == 0{ return 0 }
+        if nums.count == 1 {
+            return nums.max()!
+        }
+        var referenceArr = Array.init(repeating: 0, count: nums.count)
+        referenceArr[0] =  nums[0]
+        referenceArr[1] = max(nums[1], nums[0])
+        for i in 2..<nums.count {
+            referenceArr[i] = max(referenceArr[i-1], referenceArr[i-2]+nums[i])
+        }
+        
+        return referenceArr[nums.count-1]
+    }
+ 
+    
+    /// 你是一个专业的小偷，计划偷窃沿街的房屋，每间房内都藏有一定的现金。这个地方所有的房屋都围成一圈，这意味着第一个房屋和最后一个房屋是紧挨着的。同时，相邻的房屋装有相互连通的防盗系统，如果两间相邻的房屋在同一晚上被小偷闯入，系统会自动报警。给定一个代表每个房屋存放金额的非负整数数组，计算你在不触动警报装置的情况下，能够偷窃到的最高金额。
+    ///
+    /// 示例 1:
+    ///
+    /// 输入: [2,3,2]
+    /// 输出: 3
+    /// 解释: 你不能先偷窃 1 号房屋（金额 = 2），然后偷窃 3 号房屋（金额 = 2）, 因为他们是相邻的。
+    ///
+    /// - Parameter nums: 输入数组
+    /// - Returns: 偷窃到的最大金额
+    public func robII(_ nums: [Int]) -> Int{
+        if nums.count <= 1 {
+            return nums.isEmpty ? 0 : nums[0]
+        }
+        return robii(nums: nums, left: 0, right: nums.count-1)
+    }
+    
+    private func robii(nums:[Int], left :Int, right:Int) -> Int{
+        
+        var a = 0 , b = 0
+        for i in left..<right {
+            let m = a,n = b
+            a = n + nums[i]
+            b = max(m, n)
+        }
+        return max(a, b)
+    }
+    
+    
+    
+    /// 给定一个只包含数字的字符串，复原它并返回所有可能的 IP 地址格式。
+    ///
+    /// 示例:
+    ///
+    /// 输入: "25525511135"
+    /// 输出: ["255.255.11.135", "255.255.111.35"]
+    ///
+    /// - Parameter s: 待复原字符串
+    /// - Returns: 复原IP结果数组
+    public func restoreIpAddresses(_ s: String) -> [String] {
+        if s.count < 4 || s.count > 12 {
+            return []
+        }
+        
+        let characters = Array(s)
+        var result = [String]()
+        var candidate = [String]()
+        
+        backtracking(characters, 0, &candidate, &result)
+        
+        return result
+    }
+    private func backtracking(_ characters: [Character], _ pos: Int, _ candidate: inout [String], _ result: inout [String]) {
+        if candidate.count == 4 {
+            result.append(candidate.joined(separator: "."))
+            return
+        }
+        
+        let charsLeft = characters.count - pos
+        let groupsLeft = 4 - candidate.count
+        let minLen = groupsLeft == 1 ? charsLeft - groupsLeft + 1 : 1
+        let maxLen = characters[pos] == "0" ? 1 : min(3, charsLeft - groupsLeft + 1)
+        
+        if minLen > maxLen {
+            return
+        }
+        
+        for len in minLen...maxLen {
+            let num = String(characters[pos..<(pos + len)])
+            if Int(num)! > 255 {
+                continue
+            }
+            candidate.append(num)
+            backtracking(characters, pos + len, &candidate, &result)
+            candidate.removeLast()
+        }
+    }
 }
-
-
-
-
-

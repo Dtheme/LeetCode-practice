@@ -10,44 +10,57 @@
 import Foundation
 
 
-class BinaryTreeNode: NSObject {
+public class BinaryTreeNode<T:Comparable> {
     
-    public var leftNode :BinaryTreeNode?
+    public var value:T
+    public var leftNode:BinaryTreeNode?
     public var rightNode:BinaryTreeNode?
-    public var val:Int = 0
+    public weak var parent:BinaryTreeNode?
     
-    /// 通过数组构造二叉树
-    /// eg：let bTree = BinaryTree().createBinaryTree(array: arr)
-    /// - Parameter array: 数组
-    /// - Returns: 二叉树，数组第一个元素作为根节点
-    func createBinaryTree(array:[Int]) -> BinaryTreeNode? {
-        guard array.count > 0 else {return nil}
-        var rootNode:BinaryTreeNode?
-        for value in array {
-            rootNode = self.AddTreeNode(node: &rootNode,value)
-        }
-        return rootNode!
+    
+    /// 遍历构造方法
+    ///
+    /// - Parameter value: 节点值 类型：T
+    public convenience init(value: T) {
+        self.init(value: value, left: nil, right: nil, parent:nil)
+    }
+    
+    public init(value:T, left:BinaryTreeNode?, right:BinaryTreeNode?,
+                parent:BinaryTreeNode?) {
+        self.value = value
+        self.leftNode = left
+        self.rightNode = right
+        self.parent = parent
     }
     
     
-    /// 添加一个节点
-    ///
-    /// - Parameters:
-    ///   - node: 父节点
-    ///   - value: 添加的节点值
-    /// - Returns: 新添加的节点
-    @discardableResult func AddTreeNode(node: inout BinaryTreeNode?, _ value:Int) -> BinaryTreeNode {
-        if (node == nil) {
-            node = BinaryTreeNode()
-            node?.val = value
-        }else if (value < (node?.val)!) {
-             AddTreeNode(node: &node!.leftNode, value)
-        }else{
-             AddTreeNode(node: &node!.rightNode, value)
+    /// 添加节点
+    /// 节点值比根节点小时，插入到左节点，比根节点大插入到右节点
+    /// - Parameter value: 节点值 类型：T
+    public func addNode(value:T) {
+        // if let _ = self.parent { return }
+        if value < self.value {
+            
+            if let leftChild = leftNode {
+                leftChild.addNode(value: value)
+            } else {
+                let newNode = BinaryTreeNode(value: value)
+                newNode.parent = self
+                leftNode = newNode
+            }
+        } else {
+            
+            if let rightChild = rightNode {
+                rightChild.addNode(value: value)
+            } else {
+                let newNode = BinaryTreeNode(value: value)
+                newNode.parent = self
+                rightNode = newNode
+            }
         }
-        return node!
     }
 }
+
 
 extension BinaryTreeNode{
     ///深度
@@ -99,8 +112,10 @@ extension BinaryTreeNode {
     }
     private func inOrder(){
         leftNode?.inOrder()
-        traverseReult.add("\(val)")
+        traverseReult.add("\(value)")
         rightNode?.inOrder()
     }
 }
+
+
 
