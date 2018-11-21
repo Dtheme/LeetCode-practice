@@ -250,13 +250,25 @@ class EasyAlgorithemTest: XCTestCase {
 //        print(result)
 //    }
  
-//MARK: -  复原IP地址
+    //MARK: -  复原IP地址
     func testRestoreIpAddresses() {
         var result : [String] = []
         self.measure  {
             result = leetcode_ez.restoreIpAddresses("25525511135");
         }
         print(result);
+    }
+    
+    //MARK: -  网络延迟时间
+    func testNetworkDelayTime() {
+        var result = 0
+        self.measure {
+            var times : [[Int]] = [[2,1,1],[2,3,1],[3,4,1]]
+            var N = 4
+            var K = 2
+            result = leetcode_ez.networkDelayTime(times: &times, N: &N, K: &K)
+        }
+        print(result)
     }
 }
 

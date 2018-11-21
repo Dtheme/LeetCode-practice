@@ -9,6 +9,7 @@
 
 import UIKit
 
+
 class EasyAlgorithem:NSObject {
     
     private static let instance = EasyAlgorithem();
@@ -647,4 +648,40 @@ class EasyAlgorithem:NSObject {
             candidate.removeLast()
         }
     }
+    
+    //MARK: -  网络延迟时间
+    ///有 N 个网络节点，标记为 1 到 N。
+    ///
+    /// 给定一个列表 times，表示信号经过有向边的传递时间。 times[i] = (u, v, w)，其中 u 是源节点，v 是目标节点， w 是一个信号从源节点传递到目标节点的时间。
+    ///
+    /// 现在，我们向当前的节点 K 发送了一个信号。需要多久才能使所有节点都收到信号？如果不能使所有节点收到信号，返回 -1。
+    ///
+    /// 注意: N 的范围在 [1, 100] 之间。K 的范围在 [1, N] 之间。times 的长度在 [1, 6000] 之间。所有的边 times[i] = (u, v, w) 都有 1 <= u, v <= N 且 1 <= w <= 100。
+    public func networkDelayTime(times:inout [[Int]], N: inout Int, K:inout Int) -> Int{
+        var referenceArr : [Int] = Array.init(repeating: Int.max, count: N+1)
+        referenceArr[K] = 0
+        var loop = 1
+        while loop != 0{
+            loop -= 1
+            for i in 0..<times.count {
+                if(referenceArr[times[i][0]] != Int.max){
+                    let t = referenceArr[times[i][1]]
+                    referenceArr[times[i][1]] = min(referenceArr[times[i][0]]+times[i][2], referenceArr[times[i][1]])
+                    if(t != referenceArr[times[i][1]]){
+                        loop = 1
+                    }
+                }
+            }
+        }
+        var maxnum = 0
+        for j in 1...N {
+            if(referenceArr[j] == Int.max){
+                return -1
+            }
+            maxnum = max(maxnum, referenceArr[j])
+        }
+        return maxnum;
+    }
+    
+    
 }
