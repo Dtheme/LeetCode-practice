@@ -270,5 +270,14 @@ class EasyAlgorithemTest: XCTestCase {
         }
         print(result)
     }
+    //MARK: -  字符串中的第一个唯一字符
+    func testFirstUniqChar() {
+        var result = 0
+        self.measure {
+            result = leetcode_ez.firstUniqChar("loveleetcode")
+        }
+        print(result)
+        
+    }
 }
 

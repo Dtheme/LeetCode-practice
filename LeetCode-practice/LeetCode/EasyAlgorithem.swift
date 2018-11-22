@@ -683,5 +683,42 @@ class EasyAlgorithem:NSObject {
         return maxnum;
     }
     
-    
+    //MARK: -  字符串中的第一个唯一字符
+    ///给定一个字符串，找到它的第一个不重复的字符，并返回它的索引。如果不存在，则返回 -1。
+    ///
+    ///案例:
+    ///
+    ///s = "leetcode"
+    ///返回 0.
+    ///
+    ///s = "loveleetcode",
+    ///返回 2.
+    func firstUniqChar(_ s: String) -> Int {
+        var charArr = [String]()
+        for character in s { //将字符串转为数组
+            charArr.append(String(character))
+        }
+        var dic = [String: Int]()
+        for i in 0..<charArr.count {
+            if let _ = dic[charArr[i]] { //当字典内已经存在该字符，此时直接将其置为-1
+                dic[charArr[i]] = -1
+            } else {
+                dic[charArr[i]] = i //记录字符出现的索引位置
+            }
+        }
+        var newArray = [Int]()
+        //循环字典，拿到所有的值
+        for (_, value) in dic {
+            if value != -1 { //将所有补位-1的索引添加到新的数组中
+                newArray.append(value)
+            }
+        }
+        // 如果数组不为空，则取最小值，即第一次出现的索引，所以排序后取第一个值
+        if newArray.count > 0 {
+            return newArray.sorted().first!
+        }
+        return -1
+    }
+
+
 }
