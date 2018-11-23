@@ -66,6 +66,7 @@
 		9687640C2182AC1200588257 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		9694B1A8217D6DC4006BB0DF /* RedblackTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedblackTree.swift; sourceTree = "<group>"; };
 		969CB4C221607687002B7CB9 /* SortAlgorithemTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortAlgorithemTest.swift; sourceTree = "<group>"; };
+		969F44B721A85B1D00EA5DDB /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		96A39B372176CA3300A4924C /* BinarySearchTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinarySearchTree.swift; sourceTree = "<group>"; };
 		96C27EB4217077230073EA73 /* Deque.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deque.swift; sourceTree = "<group>"; };
 		96C70515216DA02C00F88B35 /* Stack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
@@ -129,6 +130,7 @@
 		9639F0582140FBFF00A7DD86 = {
 			isa = PBXGroup;
 			children = (
+				969F44B721A85B1D00EA5DDB /* README.md */,
 				9639F0632140FBFF00A7DD86 /* LeetCode-practice */,
 				968763FD2182AAE900588257 /* LeetCode-practiceTests */,
 				9639F0622140FBFF00A7DD86 /* Products */,
