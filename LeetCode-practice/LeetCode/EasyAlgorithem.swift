@@ -720,5 +720,49 @@ class EasyAlgorithem:NSObject {
         return -1
     }
 
+    
+    //MARK: -  最接近的三数之和
+    ///给定一个包括 n 个整数的数组 nums 和 一个目标值 target。找出 nums 中的三个整数，使得它们的和与 target 最接近。返回这三个数的和。假定每组输入只存在唯一答案。
+    ///
+    ///例如，给定数组 nums = [-1，2，1，-4], 和 target = 1.与 target 最接近的三个数的和为 2. (-1 + 2 + 1 = 2).
+    func threeSumClosest(_ nums: [Int], _ target: Int) -> Int {
+        guard nums.count >= 3 else {
+            return 0
+        }
+        
+        var sortedNums = nums.sorted(by:{$0 < $1})
+        var minDifference = Int.max
+        
+        for i in 0 ... sortedNums.count - 3 {
+            if i > 0 && sortedNums[i] == sortedNums[i - 1] {
+                continue
+            }
+            
+            var left = i + 1
+            var right = sortedNums.count - 1
+            while left < right {
+                let sum = sortedNums[i] + sortedNums[left] + sortedNums[right]
+                let difference = target - sum
+                if abs(difference) < abs(minDifference) {
+                    minDifference = difference
+                    if difference == 0 {
+                        return target
+                    }
+                }
+                
+                if sum < target {
+                    repeat {
+                        left += 1
+                    } while (left < right && sortedNums[left] == sortedNums[left - 1])
+                } else {
+                    repeat {
+                        right -= 1
+                    } while (left < right && sortedNums[right] == sortedNums[right + 1])
+                }
+            }
+        }
+        
+        return target - minDifference
+    }
 
 }

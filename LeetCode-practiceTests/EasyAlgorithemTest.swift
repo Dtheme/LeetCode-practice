@@ -270,6 +270,7 @@ class EasyAlgorithemTest: XCTestCase {
         }
         print(result)
     }
+    
     //MARK: -  字符串中的第一个唯一字符
     func testFirstUniqChar() {
         var result = 0
@@ -278,6 +279,15 @@ class EasyAlgorithemTest: XCTestCase {
         }
         print(result)
         
+    }
+    
+    //MARK: -  最接近的三数之和
+    func testThreeSumClosest() {
+        var result = 0
+        self.measure {
+            result = leetcode_ez.threeSumClosest([-1, 2, 1, -4], 1)
+        }
+        print(result)
     }
 }
 
