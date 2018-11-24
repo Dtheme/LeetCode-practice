@@ -166,9 +166,9 @@
 		968763FD2182AAE900588257 /* LeetCode-practiceTests */ = {
 			isa = PBXGroup;
 			children = (
-				969CB4C221607687002B7CB9 /* SortAlgorithemTest.swift */,
-				96C70517216DCE8A00F88B35 /* DataStructureTest.swift */,
 				96003FD4216C3A49005AD41E /* EasyAlgorithemTest.swift */,
+				96C70517216DCE8A00F88B35 /* DataStructureTest.swift */,
+				969CB4C221607687002B7CB9 /* SortAlgorithemTest.swift */,
 				968764002182AAE900588257 /* Info.plist */,
 			);
 			path = "LeetCode-practiceTests";

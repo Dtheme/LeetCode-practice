@@ -289,5 +289,15 @@ class EasyAlgorithemTest: XCTestCase {
         }
         print(result)
     }
+   
+    func testThreeSum() {
+        var result:[[Int]]?
+        self.measure {
+            let arr : [Int] = [-1, 0, 1, 2, -1, -4]
+            result = leetcode_ez.threeSum(arr)
+        }
+        print(result!)
+    }
+
 }
 
