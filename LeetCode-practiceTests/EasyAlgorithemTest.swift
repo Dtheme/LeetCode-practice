@@ -290,6 +290,7 @@ class EasyAlgorithemTest: XCTestCase {
         print(result)
     }
    
+    //MARK: -  三数之和
     func testThreeSum() {
         var result:[[Int]]?
         self.measure {
@@ -299,5 +300,22 @@ class EasyAlgorithemTest: XCTestCase {
         print(result!)
     }
 
+    //MARK: -  电话号码的字母组合
+    func testLetterCombinations() {
+        var result : [String]?
+        self.measure {
+            result = leetcode_ez.letterCombinations("23")
+        }
+        print(result!)
+    }
+    
+    //MARK: -  4sum
+    func testFourSum() {
+        var result : [[Int]]?
+        self.measure {
+            result = leetcode_ez.fourSum([1, 0, -1, 0, -2, 2], 0)
+        }
+        print(result!)
+    }
 }
 

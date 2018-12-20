@@ -841,4 +841,133 @@ class EasyAlgorithem:NSObject {
         return res
     }
     
+    //MARK: -  17. Letter Combinations of a Phone Number
+    /// Given a string containing digits from 2-9 inclusive, return all possible letter combinations that the number could represent.A mapping of digit to letters (just like on the telephone buttons) is given below. Note that 1 does not map to any letters.
+    ///
+    /// 例：Input: "23"
+    /// Output: ["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"].
+    func letterCombinations(_ digits: String) -> [String] {
+        let lettersOfNums : [Character : [String]] = ["1":[],
+                                                      "2":["a", "b", "c"],
+                                                      "3":["d", "e", "f"],
+                                                      "4":["g", "h", "i"],
+                                                      "5":["j", "k", "l"],
+                                                      "6":["m", "n", "o"],
+                                                      "7":["p", "q", "r", "s"],
+                                                      "8":["t", "u", "v"],
+                                                      "9":["w", "x", "y", "z"]]
+        
+        let characters = [Character](String(digits))
+        guard characters.count > 0 else {
+            return []
+        }
+        
+        let firstDigit = characters[0]
+        guard let letters = lettersOfNums[firstDigit] else {
+            return []
+        }
+        guard characters.count > 1 else {
+            return letters
+        }
+        
+        let restCombinations = letterCombinations(String(characters.suffix(from: 1)))
+        var combinations : [String] = []
+        for letter in letters {
+            for restCombination in restCombinations {
+                combinations.append(letter + restCombination)
+            }
+        }
+        return combinations
+    }
+    
+    //MARK: - 18. 4sum
+    /// 给定一个包含 n 个整数的数组 nums 和一个目标值 target，判断 nums 中是否存在四个元素 a，b，c 和 d ，使得 a + b + c + d 的值与 target 相等？找出所有满足条件且不重复的四元组。
+    ///
+    /// 注意：答案中不可以包含重复的四元组。
+    ///
+    /// 例:
+    /// input：nums = [1, 0, -1, 0, -2, 2]，和 target = 0。
+    /// 满足要求的四元组集合为：
+    //    [
+    //    [-1,  0, 0, 1],
+    //    [-2, -1, 1, 2],
+    //    [-2,  0, 0, 2]
+    //    ]
+    func fourSum(_ nums: [Int], _ target: Int) -> [[Int]] {
+        guard nums.count >= 4 else {
+            return []
+        }
+        
+        var sortedNums = nums.sorted(by:{$0 < $1})
+        var result : [[Int]] = []
+        
+        for i in 0 ... sortedNums.count - 4 {
+            if i > 0 && sortedNums[i] == sortedNums[i - 1] {
+                continue
+            }
+            
+            // pruning
+            let minSum = sortedNums[i] + sortedNums[i + 1] + sortedNums[i + 2] + sortedNums[i + 3]
+            if minSum > target {
+                break
+            } else if minSum == target {
+                result.append([sortedNums[i], sortedNums[i + 1], sortedNums[i + 2], sortedNums[i + 3]])
+                break
+            }
+            
+            let maxSum = sortedNums[i] + sortedNums[sortedNums.count - 1] + sortedNums[sortedNums.count - 2] + sortedNums[sortedNums.count - 3]
+            if maxSum < target {
+                continue
+            } else if maxSum == target {
+                result.append([sortedNums[i], sortedNums[sortedNums.count - 1], sortedNums[sortedNums.count - 2], sortedNums[sortedNums.count - 3]])
+                continue
+            }
+            
+            for j in i + 1 ... sortedNums.count - 3 {
+                if j > i + 1 && sortedNums[j] == sortedNums[j - 1] {
+                    continue
+                }
+                
+                let partialTarget = target - sortedNums[i] - sortedNums[j]
+                
+                // pruning
+                let minSum = sortedNums[j + 1] + sortedNums[j + 2]
+                if minSum > partialTarget {
+                    break
+                } else if minSum == partialTarget {
+                    result.append([sortedNums[i], sortedNums[j], sortedNums[j + 1], sortedNums[j + 2]])
+                    break
+                }
+                
+                let maxSum = sortedNums[sortedNums.count - 1] + sortedNums[sortedNums.count - 2]
+                if maxSum < partialTarget {
+                    continue
+                } else if maxSum == partialTarget {
+                    result.append([sortedNums[i], sortedNums[j], sortedNums[sortedNums.count - 1], sortedNums[sortedNums.count - 2]])
+                    continue
+                }
+                
+                var left = j + 1
+                var right = sortedNums.count - 1
+                
+                while left < right {
+                    let sum = sortedNums[left] + sortedNums[right]
+                    if sum == partialTarget {
+                        result.append([sortedNums[i], sortedNums[j], sortedNums[left], sortedNums[right]])
+                    }
+                    
+                    if sum < partialTarget {
+                        repeat {
+                            left += 1
+                        } while (left < right && sortedNums[left] == sortedNums[left - 1])
+                    } else {
+                        repeat {
+                            right -= 1
+                        } while (left < right && sortedNums[right] == sortedNums[right + 1])
+                    }
+                }
+            }
+        }
+        return result
+    }
 }
