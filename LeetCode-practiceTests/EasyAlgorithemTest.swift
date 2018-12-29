@@ -317,5 +317,14 @@ class EasyAlgorithemTest: XCTestCase {
         }
         print(result!)
     }
+    
+    //MARK: -  找到k个最接近的元素
+    func testFindClosestElements() {
+        var result : NSMutableArray?
+        self.measure {
+            result = leetcode_ez.findClosestElements(arr: [1,2,3,4,5], k: 4, x: -1)
+        }
+        print(result!)
+    }
 }
 

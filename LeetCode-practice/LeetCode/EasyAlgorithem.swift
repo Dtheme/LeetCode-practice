@@ -16,7 +16,7 @@ class EasyAlgorithem:NSObject {
     class var shardCollection: EasyAlgorithem {
         return instance;
     }
-
+    
     func testSingle() -> Void {
         print("run single")
     }
@@ -188,7 +188,7 @@ class EasyAlgorithem:NSObject {
             return 2<<(maxPower-1)
         }
     }
-
+    
     //MARK: -  公共前缀
     /// 编写一个函数来查找字符串数组中的最长公共前缀。如果不存在公共前缀，返回空字符串 ""。
     ///
@@ -254,7 +254,7 @@ class EasyAlgorithem:NSObject {
         
         let DecimalA = self.binary2dec(num: a)
         let DecimalB = self.binary2dec(num: b)
-
+        
         print("\(DecimalA),\(DecimalB)")
         let sum = String(DecimalA + DecimalB ,radix:2)
         return sum
@@ -292,12 +292,12 @@ class EasyAlgorithem:NSObject {
         digits.insert(1, at: 0)
         return digits
     }
-   
+    
     //MARK: -  盛最多水的容器
     ///给定 n 个非负整数 a1，a2，...，an，每个数代表坐标中的一个点 (i, ai) 。在坐标内画 n 条垂直线，垂直线 i 的两个端点分别为 (i, ai) 和 (i, 0)。找出其中的两条线，使得它们与 x 轴共同构成的容器可以容纳最多的水。
     ///说明：不能倾斜容器，且 n 的值至少为 2。
     ///示例：
-
+    
     public func maxArea(_ height: [Int]) -> Int {
         var result = 0
         var left = 0;
@@ -405,7 +405,7 @@ class EasyAlgorithem:NSObject {
         return nums
     }
     
-
+    
     //MARK: -  买卖股票的最佳时机I
     /// 给定一个数组，它的第 i 个元素是一支给定股票第 i 天的价格。 如果你最多只允许完成一笔交易（即买入和卖出一支股票），设计一个算法来计算你所能获取的最大利润。 注意你不能在买入股票前卖出股票。
     ///
@@ -569,7 +569,7 @@ class EasyAlgorithem:NSObject {
         
         return referenceArr[nums.count-1]
     }
- 
+    
     
     /// 你是一个专业的小偷，计划偷窃沿街的房屋，每间房内都藏有一定的现金。这个地方所有的房屋都围成一圈，这意味着第一个房屋和最后一个房屋是紧挨着的。同时，相邻的房屋装有相互连通的防盗系统，如果两间相邻的房屋在同一晚上被小偷闯入，系统会自动报警。给定一个代表每个房屋存放金额的非负整数数组，计算你在不触动警报装置的情况下，能够偷窃到的最高金额。
     ///
@@ -719,7 +719,7 @@ class EasyAlgorithem:NSObject {
         }
         return -1
     }
-
+    
     
     //MARK: -  最接近的三数之和
     ///给定一个包括 n 个整数的数组 nums 和 一个目标值 target。找出 nums 中的三个整数，使得它们的和与 target 最接近。返回这三个数的和。假定每组输入只存在唯一答案。
@@ -764,7 +764,7 @@ class EasyAlgorithem:NSObject {
         
         return target - minDifference
     }
-
+    
     //MARK: -  三数之和
     ///给定一个包含 n 个整数的数组 nums，判断 nums 中是否存在三个元素 a，b，c ，使得 a + b + c = 0 ？找出所有满足条件且不重复的三元组。
     ///
@@ -969,5 +969,42 @@ class EasyAlgorithem:NSObject {
             }
         }
         return result
+    }
+    
+    //MARK: -  找到 K 个最接近的元素
+    /*
+     List<Integer> res=new ArrayList<>();
+     int len=arr.length;
+     int left=0;
+     int right=len-1;
+     while (len>k) {
+     if (Math.abs(arr[left]-x)>Math.abs(arr[right]-x)) {
+     left++;
+     }else {
+     right--;
+     }
+     len--;
+     }
+     for (int index = left; index <=right; index++) {
+     res.add(arr[index]);
+     }
+     return res;
+    */
+    func findClosestElements(arr:[Int], k:Int, x:Int) -> NSMutableArray {
+        var left = 0, right = arr.count-1
+        var aCount = arr.count
+        while (aCount > k) {
+            if (abs(arr[left]-x) > abs(arr[right] - x)){
+                left += 1
+            }else{
+                right -= 1
+            }
+            aCount -= 1
+        }
+        let res : NSMutableArray = []
+        for i in left...right {
+            res.add(arr[i])
+        }
+        return res
     }
 }
