@@ -18,6 +18,9 @@
 		9639F06A2140FBFF00A7DD86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9639F0682140FBFF00A7DD86 /* Main.storyboard */; };
 		9639F06C2140FC0000A7DD86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9639F06B2140FC0000A7DD86 /* Assets.xcassets */; };
 		9639F06F2140FC0000A7DD86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9639F06D2140FC0000A7DD86 /* LaunchScreen.storyboard */; };
+		963F463D21DEFCF2000E57C1 /* Graph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963F463C21DEFCF2000E57C1 /* Graph.swift */; };
+		963F463F21DEFFB5000E57C1 /* Edge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963F463E21DEFFB5000E57C1 /* Edge.swift */; };
+		963F464121DEFFBF000E57C1 /* Vertex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963F464021DEFFBF000E57C1 /* Vertex.swift */; };
 		96427D262188284E000DA88C /* LRUCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96427D252188284E000DA88C /* LRUCache.swift */; };
 		965318F4217426D800138C2C /* Heap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965318F3217426D800138C2C /* Heap.swift */; };
 		9662002A216EE956006298C2 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96620029216EE956006298C2 /* Queue.swift */; };
@@ -57,6 +60,9 @@
 		9639F06B2140FC0000A7DD86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9639F06E2140FC0000A7DD86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9639F0702140FC0000A7DD86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		963F463C21DEFCF2000E57C1 /* Graph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Graph.swift; sourceTree = "<group>"; };
+		963F463E21DEFFB5000E57C1 /* Edge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Edge.swift; sourceTree = "<group>"; };
+		963F464021DEFFBF000E57C1 /* Vertex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vertex.swift; sourceTree = "<group>"; };
 		96427D252188284E000DA88C /* LRUCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LRUCache.swift; sourceTree = "<group>"; };
 		965318F3217426D800138C2C /* Heap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Heap.swift; sourceTree = "<group>"; };
 		96620029216EE956006298C2 /* Queue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
@@ -95,6 +101,7 @@
 		96003FD6216C3C9C005AD41E /* DataStructure */ = {
 			isa = PBXGroup;
 			children = (
+				963F463B21DEFCA6000E57C1 /* Graph */,
 				96003FD7216C3C9C005AD41E /* LinkedList.swift */,
 				96C70515216DA02C00F88B35 /* Stack.swift */,
 				960D517021744097006DA4AA /* MinStack.swift */,
@@ -161,6 +168,16 @@
 				9639F0702140FC0000A7DD86 /* Info.plist */,
 			);
 			path = "LeetCode-practice";
+			sourceTree = "<group>";
+		};
+		963F463B21DEFCA6000E57C1 /* Graph */ = {
+			isa = PBXGroup;
+			children = (
+				963F463C21DEFCF2000E57C1 /* Graph.swift */,
+				963F463E21DEFFB5000E57C1 /* Edge.swift */,
+				963F464021DEFFBF000E57C1 /* Vertex.swift */,
+			);
+			path = Graph;
 			sourceTree = "<group>";
 		};
 		968763FD2182AAE900588257 /* LeetCode-practiceTests */ = {
@@ -288,11 +305,14 @@
 				96003FDD216C3CD6005AD41E /* SortAlgorithem.swift in Sources */,
 				9662002C216F2146006298C2 /* CircularbufferQueue.swift in Sources */,
 				96003FDA216C3C9C005AD41E /* BinaryTree.swift in Sources */,
+				963F464121DEFFBF000E57C1 /* Vertex.swift in Sources */,
 				96C70516216DA02C00F88B35 /* Stack.swift in Sources */,
 				9662002A216EE956006298C2 /* Queue.swift in Sources */,
 				96A39B382176CA3300A4924C /* BinarySearchTree.swift in Sources */,
 				9639F0672140FBFF00A7DD86 /* ViewController.swift in Sources */,
+				963F463F21DEFFB5000E57C1 /* Edge.swift in Sources */,
 				9694B1A9217D6DC4006BB0DF /* RedblackTree.swift in Sources */,
+				963F463D21DEFCF2000E57C1 /* Graph.swift in Sources */,
 				9639F0652140FBFF00A7DD86 /* AppDelegate.swift in Sources */,
 				9612539F218008F900B4609C /* AVLTree.swift in Sources */,
 				96003FE0216C3CFA005AD41E /* EasyAlgorithem.swift in Sources */,
