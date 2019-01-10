@@ -4,7 +4,8 @@
 //
 //  Created by dzw on 2018/9/6.
 //  Copyright © 2018年 dzw. All rights reserved.
-//  入门以及简单级的题-题目均来自leetcode：https://leetcode-cn.com
+//
+//  题目均来自leetcode：https://leetcode-cn.com
 //
 
 import UIKit
@@ -972,24 +973,6 @@ class EasyAlgorithem:NSObject {
     }
     
     //MARK: -  找到 K 个最接近的元素
-    /*
-     List<Integer> res=new ArrayList<>();
-     int len=arr.length;
-     int left=0;
-     int right=len-1;
-     while (len>k) {
-     if (Math.abs(arr[left]-x)>Math.abs(arr[right]-x)) {
-     left++;
-     }else {
-     right--;
-     }
-     len--;
-     }
-     for (int index = left; index <=right; index++) {
-     res.add(arr[index]);
-     }
-     return res;
-    */
     func findClosestElements(arr:[Int], k:Int, x:Int) -> NSMutableArray {
         var left = 0, right = arr.count-1
         var aCount = arr.count
