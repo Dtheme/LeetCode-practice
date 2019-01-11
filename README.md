@@ -43,6 +43,12 @@ LeetCode Practice code, data structure, and Commonly used sorting algorithms tha
 
 - AVLTree
 
+- 图
+
+- 邻接表图
+
+- 邻接矩阵图
+
 #### 排序算法：
 
 - 冒泡排序
@@ -89,7 +95,8 @@ LeetCode Practice code, data structure, and Commonly used sorting algorithms tha
 - 三数之和
 - 四数之和
 - 电话号码的字母组合
-
+- 4sum
+- 找到 K 个最接近的元素
 
 > 渺小，但不逃跑。
 
