@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		86EEF9B5236C167400C8FFBC /* tag_array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EEF9B4236C167400C8FFBC /* tag_array.swift */; };
 		96003FD9216C3C9C005AD41E /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96003FD7216C3C9C005AD41E /* LinkedList.swift */; };
 		96003FDA216C3C9C005AD41E /* BinaryTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96003FD8216C3C9C005AD41E /* BinaryTree.swift */; };
 		96003FDD216C3CD6005AD41E /* SortAlgorithem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96003FDC216C3CD6005AD41E /* SortAlgorithem.swift */; };
@@ -48,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		86EEF9B4236C167400C8FFBC /* tag_array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tag_array.swift; sourceTree = "<group>"; };
 		96003FD4216C3A49005AD41E /* EasyAlgorithemTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyAlgorithemTest.swift; sourceTree = "<group>"; };
 		96003FD7216C3C9C005AD41E /* LinkedList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkedList.swift; sourceTree = "<group>"; };
 		96003FD8216C3C9C005AD41E /* BinaryTree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BinaryTree.swift; sourceTree = "<group>"; };
@@ -102,6 +104,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		86EEF9B3236C156600C8FFBC /* LeetCodeTag */ = {
+			isa = PBXGroup;
+			children = (
+				86EEF9B4236C167400C8FFBC /* tag_array.swift */,
+			);
+			path = LeetCodeTag;
+			sourceTree = "<group>";
+		};
 		96003FD6216C3C9C005AD41E /* DataStructure */ = {
 			isa = PBXGroup;
 			children = (
@@ -163,6 +173,7 @@
 			children = (
 				9639F0642140FBFF00A7DD86 /* AppDelegate.swift */,
 				9639F0662140FBFF00A7DD86 /* ViewController.swift */,
+				86EEF9B3236C156600C8FFBC /* LeetCodeTag */,
 				96003FDE216C3CE8005AD41E /* LeetCode */,
 				96003FDB216C3CD6005AD41E /* SortAlgorithem */,
 				96003FD6216C3C9C005AD41E /* DataStructure */,
@@ -323,6 +334,7 @@
 				9612539F218008F900B4609C /* AVLTree.swift in Sources */,
 				963B8D36236B364100EC6E49 /* Vertex.swift in Sources */,
 				963B8D33236B364100EC6E49 /* AdjacencyListGraph.swift in Sources */,
+				86EEF9B5236C167400C8FFBC /* tag_array.swift in Sources */,
 				96003FE0216C3CFA005AD41E /* EasyAlgorithem.swift in Sources */,
 				96C27EB5217077230073EA73 /* Deque.swift in Sources */,
 				96003FD9216C3C9C005AD41E /* LinkedList.swift in Sources */,
