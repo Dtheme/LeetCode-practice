@@ -470,9 +470,7 @@ class EasyAlgorithem:NSObject {
                 local[j] = max(global[j-1] + max(diff, 0), local[j] + diff)
                 global[j] = max(local[j], global[j])
             }
-            
         }
-        
         return global[2]
         
     }
