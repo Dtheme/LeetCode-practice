@@ -4,6 +4,7 @@
 //
 //  Created by dzw on 2018/10/17.
 //  Copyright © 2018年 dzw. All rights reserved.
+//
 //  二叉搜索树
 //
 
@@ -41,7 +42,7 @@ public class BinarySearchTreeNode<T:Comparable> {
     }
     
     
-    /// 添加节点
+    /// 添加节点（递归的方式）
     /// 节点值比根节点小时，插入到左节点，比根节点大插入到右节点
     /// - Parameter value: 节点值 类型：T
     public func addNode(value:T) {
@@ -65,6 +66,33 @@ public class BinarySearchTreeNode<T:Comparable> {
                 rightNode = newNode
             }
         }
+    }
+    
+    public func nonRecursive_AddNode(value:T) {
+        var node = value as! BinarySearchTreeNode<T>
+        var pnt = parent
+        let cmp = 0
+        while node.value != nil {
+            pnt = node
+            pnt = node as BinarySearchTreeNode<T>?
+            if cmp < 0 {
+                node = node.leftNode!
+            }else if cmp > 0{
+                node = node.rightNode!
+            }else{
+                node.value = value
+                return
+            }
+            //此时找到插入位置
+            if(cmp<0){
+//                par.left = Node(element,par);
+                pnt?.leftNode = BinarySearchTreeNode.init(value: parent!.value)
+            }else{
+//                par.right = new Node(element,par);
+                pnt?.rightNode = BinarySearchTreeNode.init(value: value)
+            }
+        }
+
     }
 
     /// 遍历二叉树

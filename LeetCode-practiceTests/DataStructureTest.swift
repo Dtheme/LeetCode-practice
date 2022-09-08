@@ -209,61 +209,60 @@ class DataStructureTest: XCTestCase {
         rootNode.addNode(value: 21)
         rootNode.addNode(value: 8)
         rootNode.addNode(value: 4)
-    
         
-        //前序递归遍历
-        let resPreorder = BinarySearchTreeNode.traverse(node: rootNode, type: .PreOrder)
-        print("前序:\(resPreorder.debugDescription)")
+//        //前序递归遍历A
+//        let resPreorder = BinarySearchTreeNode.traverse(node: rootNode, type: .PreOrder)
+//        print("前序:\(resPreorder.debugDescription)")
         
-        //中序递归遍历
+        //中序递归遍历 就是
         let resInorder = BinarySearchTreeNode.traverse(node: rootNode, type: .InOrder)
         print("中序:\(resInorder.debugDescription)")
 
-        //后序递归遍历
-        let postPreorder = BinarySearchTreeNode.traverse(node: rootNode, type: .PostOrder)
-        print(postPreorder.debugDescription)
-        print("后序:\(postPreorder.debugDescription)")
+//        //后序递归遍历
+//        let postPreorder = BinarySearchTreeNode.traverse(node: rootNode, type: .PostOrder)
+//        print(postPreorder.debugDescription)
+//        print("后序:\(postPreorder.debugDescription)")
+//
+//        //广度优先遍历
+//        let BFTResult = BinarySearchTreeNode.traverse(node: rootNode, type: .BreadthFirst)
+//        print(BFTResult.debugDescription)
+//        print("广度优先:\(BFTResult.debugDescription)")
         
-        //广度优先遍历
-        let BFTResult = BinarySearchTreeNode.traverse(node: rootNode, type: .BreadthFirst)
-        print(BFTResult.debugDescription)
-        print("广度优先:\(BFTResult.debugDescription)")
-        
-        //搜索
-        let searchValue11 = rootNode.search(value: 11)?.value
-        let searchValue21 = rootNode.search(value: 21)?.value
-        print("搜索是否有11: " + "\(String(describing: searchValue11))")
-        print("搜索是否有21: " + "\(String(describing: searchValue21))")
-        
-        //删除节点
-        /*删除前
-               10
-            /      \
-           5       20
-          / \     /  \
-         4   8  nil   21
-         */
-        
-        rootNode.rightNode?.delete()
-        /*删除后
-                10
-             /      \
-            5       21
-           / \
-          4   8
-         */
-        rootNode.leftNode?.rightNode?.delete()
-        /*删除后
-               10
-            /      \
-           5       21
-          / \
-         4  nil
-         */
-        let after_del = BinarySearchTreeNode.traverse(node: rootNode, type: .InOrder)
-        print("删除后-中序遍历：\(after_del.debugDescription)")
-        
-        print(rootNode.depth() as Any)
+//        //搜索
+//        let searchValue11 = rootNode.search(value: 11)?.rootNode
+//        let searchValue21 = rootNode.search(value: 21)?.rootNode
+//        print("搜索是否有11: " + "\(String(describing: searchValue11))")
+//        print("搜索是否有21: " + "\(String(describing: searchValue21))")
+//
+//        //删除节点
+//        /*删除前
+//               10
+//            /      \
+//           5       20
+//          / \     /  \
+//         4   8  nil   21
+//         */
+//
+//        rootNode.rightNode?.delete()
+//        /*删除后
+//                10
+//             /      \
+//            5       21
+//           / \
+//          4   8
+//         */
+//        rootNode.leftNode?.rightNode?.delete()
+//        /*删除后
+//               10
+//            /      \
+//           5       21
+//          / \
+//         4  nil
+//         */
+//        let after_del = BinarySearchTreeNode.traverse(node: rootNode, type: .InOrder)
+//        print("删除后-中序遍历：\(after_del.debugDescription)")
+//
+//        print(rootNode.depth() as Any)
     }
     
     
