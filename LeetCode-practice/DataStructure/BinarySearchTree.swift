@@ -14,7 +14,7 @@ enum traverseBinaryTreeType {
     case InOrder          //中序递归遍历
     case PreOrder         //先序递归遍历
     case PostOrder        //后序递归遍历
-    case BreadthFirst     //广度优先遍历
+    case BreadthFirst     //广度优先遍历 层序遍历
 }
 
 private var traverseReult : NSMutableArray = []
@@ -158,7 +158,7 @@ public class BinarySearchTreeNode<T:Comparable> {
         traverseReult.add(node.value)
         
     }
-    //使用队列实现
+    //使用队列实现 layer
     private class func breadthFirst(node:BinarySearchTreeNode?) {
         if (node == nil) { return }
         var queue = Queue<BinarySearchTreeNode>()
@@ -173,6 +173,25 @@ public class BinarySearchTreeNode<T:Comparable> {
                 queue.enqueue(element: (node?.rightNode)!)
             }
         }
+    }
+    //非递归
+    private class func morris_preOrder(node:BinarySearchTreeNode?) -> [T] {
+        guard let element = node else { return [] }
+        var res : [T] = []
+        var stack = [element]
+        while !stack.isEmpty {
+            let node = stack.removeLast()
+            
+            res.append(node.value)
+            
+            if let right = node.rightNode {
+                stack.append(right)
+            }
+            if let left = node.leftNode {
+                stack.append(left)
+            }
+        }
+        return res
     }
     
     /// 某个节点的深度
