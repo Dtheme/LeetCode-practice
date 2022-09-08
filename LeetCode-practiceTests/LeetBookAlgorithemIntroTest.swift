@@ -41,9 +41,15 @@ class LeetBookAlgorithemIntroTest: XCTestCase {
         print(result)
     }
     
-    func testRotate2() {
-        var nums = [1,2,3,4,5,6,7]
-        let result: () = leetbook_ez.rotate2(&nums, 3)
+    func testIntersect() {
+        var nums1 = [1,2,2,1]
+        var nums2 = [1,2,2,1]
+        let result:[Int] = leetbook_ez.intersect(&nums1,&nums2)
+    }
+    func testIntersect2() {
+        var nums1 = [1,2,3,4,2,2,1,7]
+        var nums2 = [3,4,2,7]
+        let result:[Int] = leetbook_ez.intersect2(nums1, nums2)
     }
 }
 
