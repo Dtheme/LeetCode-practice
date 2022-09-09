@@ -108,14 +108,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		86EEF9B3236C156600C8FFBC /* LeetCodeTag */ = {
-			isa = PBXGroup;
-			children = (
-				86EEF9B4236C167400C8FFBC /* tag_array.swift */,
-			);
-			path = LeetCodeTag;
-			sourceTree = "<group>";
-		};
 		96003FD6216C3C9C005AD41E /* DataStructure */ = {
 			isa = PBXGroup;
 			children = (
@@ -146,8 +138,9 @@
 		96003FDE216C3CE8005AD41E /* LeetCode */ = {
 			isa = PBXGroup;
 			children = (
-				96003FDF216C3CFA005AD41E /* EasyAlgorithem.swift */,
+				86EEF9B4236C167400C8FFBC /* tag_array.swift */,
 				786C521D28C883770090DD54 /* LeetBook_Algorithem_Intro.swift */,
+				96003FDF216C3CFA005AD41E /* EasyAlgorithem.swift */,
 				96427D252188284E000DA88C /* LRUCache.swift */,
 			);
 			path = LeetCode;
@@ -178,7 +171,6 @@
 			children = (
 				9639F0642140FBFF00A7DD86 /* AppDelegate.swift */,
 				9639F0662140FBFF00A7DD86 /* ViewController.swift */,
-				86EEF9B3236C156600C8FFBC /* LeetCodeTag */,
 				96003FDE216C3CE8005AD41E /* LeetCode */,
 				96003FDB216C3CD6005AD41E /* SortAlgorithem */,
 				96003FD6216C3C9C005AD41E /* DataStructure */,
