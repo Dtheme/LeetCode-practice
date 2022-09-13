@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7843F16028D05B0200A6DEF1 /* LeetDaily.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7843F15F28D05B0200A6DEF1 /* LeetDaily.swift */; };
+		7843F16228D067A100A6DEF1 /* LeetDailyTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7843F16128D067A100A6DEF1 /* LeetDailyTest.swift */; };
 		786C521E28C883770090DD54 /* LeetBook_Algorithem_Intro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786C521D28C883770090DD54 /* LeetBook_Algorithem_Intro.swift */; };
 		786C522028C88A010090DD54 /* LeetBookAlgorithemIntroTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786C521F28C88A010090DD54 /* LeetBookAlgorithemIntroTest.swift */; };
 		86EEF9B5236C167400C8FFBC /* tag_array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EEF9B4236C167400C8FFBC /* tag_array.swift */; };
@@ -51,6 +53,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7843F15F28D05B0200A6DEF1 /* LeetDaily.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetDaily.swift; sourceTree = "<group>"; };
+		7843F16128D067A100A6DEF1 /* LeetDailyTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetDailyTest.swift; sourceTree = "<group>"; };
 		786C521D28C883770090DD54 /* LeetBook_Algorithem_Intro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetBook_Algorithem_Intro.swift; sourceTree = "<group>"; };
 		786C521F28C88A010090DD54 /* LeetBookAlgorithemIntroTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetBookAlgorithemIntroTest.swift; sourceTree = "<group>"; };
 		86EEF9B4236C167400C8FFBC /* tag_array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tag_array.swift; sourceTree = "<group>"; };
@@ -139,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				86EEF9B4236C167400C8FFBC /* tag_array.swift */,
+				7843F15F28D05B0200A6DEF1 /* LeetDaily.swift */,
 				786C521D28C883770090DD54 /* LeetBook_Algorithem_Intro.swift */,
 				96003FDF216C3CFA005AD41E /* EasyAlgorithem.swift */,
 				96427D252188284E000DA88C /* LRUCache.swift */,
@@ -201,6 +206,7 @@
 				786C521F28C88A010090DD54 /* LeetBookAlgorithemIntroTest.swift */,
 				96C70517216DCE8A00F88B35 /* DataStructureTest.swift */,
 				969CB4C221607687002B7CB9 /* SortAlgorithemTest.swift */,
+				7843F16128D067A100A6DEF1 /* LeetDailyTest.swift */,
 				968764002182AAE900588257 /* Info.plist */,
 			);
 			path = "LeetCode-practiceTests";
@@ -323,6 +329,7 @@
 				9662002C216F2146006298C2 /* CircularbufferQueue.swift in Sources */,
 				96003FDA216C3C9C005AD41E /* BinaryTree.swift in Sources */,
 				96C70516216DA02C00F88B35 /* Stack.swift in Sources */,
+				7843F16028D05B0200A6DEF1 /* LeetDaily.swift in Sources */,
 				9662002A216EE956006298C2 /* Queue.swift in Sources */,
 				96A39B382176CA3300A4924C /* BinarySearchTree.swift in Sources */,
 				9639F0672140FBFF00A7DD86 /* ViewController.swift in Sources */,
@@ -348,6 +355,7 @@
 			files = (
 				968764082182AAF500588257 /* DataStructureTest.swift in Sources */,
 				786C522028C88A010090DD54 /* LeetBookAlgorithemIntroTest.swift in Sources */,
+				7843F16228D067A100A6DEF1 /* LeetDailyTest.swift in Sources */,
 				968764062182AAF500588257 /* EasyAlgorithemTest.swift in Sources */,
 				968764072182AAF500588257 /* SortAlgorithemTest.swift in Sources */,
 			);

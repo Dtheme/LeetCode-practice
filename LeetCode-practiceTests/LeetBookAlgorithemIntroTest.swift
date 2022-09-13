@@ -7,9 +7,9 @@
 //
 
 import Foundation
+import XCTest
 
 @testable import LeetCode_practice
-import XCTest
 
 
 class LeetBookAlgorithemIntroTest: XCTestCase {
@@ -56,6 +56,13 @@ class LeetBookAlgorithemIntroTest: XCTestCase {
         [["5","3",".",".","7",".",".",".","."],["5",".",".","1","9","5",".",".","."],[".","9","8",".",".",".",".","6","."],["8",".",".",".","6",".",".",".","3"],["4",".",".","8",".","3",".",".","1"],["7",".",".",".","2",".",".",".","6"],[".","6",".",".",".",".","2","8","."],[".",".",".","4","1","9",".",".","5"],[".",".",".",".","8",".",".","7","9"]]
         var res = leetbook_ez.isValidSudoku(board)
         print(res)
+    }
+    
+    func testReverseString() {
+        
+        var s:[Character] = ["D","e","j","a","v","u"]
+        let reverseS = leetbook_ez.reverseString(&s)
+        print(reverseS)
     }
 }
 

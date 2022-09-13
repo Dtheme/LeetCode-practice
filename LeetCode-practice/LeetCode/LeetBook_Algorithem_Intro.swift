@@ -234,9 +234,117 @@ class LeetBook_Algorithem_Intro : NSObject {
     }
     
     // MARK:旋转图像
-    // 输入：matrix = [[1,2,3],[4,5,6],[7,8,9]]
-    // 输出：[[7,4,1],[8,5,2],[9,6,3]]
+    // 输入：matrix = [
+    //               [1,2,3],
+    //               [4,5,6],
+    //               [7,8,9]]
+    // 输出：[[7,4,1],
+    //       [8,5,2],
+    //       [9,6,3]]
+    // 直接交换元素 达到旋转的目的
     func rotate(_ matrix: inout [[Int]]) {
-
+        let n = matrix.count
+        
+        for i in 0..<n {
+            for j in i..<n {
+                let temp = matrix[i][j]
+                matrix[i][j] = matrix[j][i]
+                matrix[j][i] = temp
+            }
+        }
+        
+        for i in 0..<n {
+            for j in 0..<n/2 {
+                let temp = matrix[i][j]
+                matrix[i][j] = matrix[i][n-j-1]
+                matrix[i][n-j-1] = temp
+            }
+        }
     }
+    
+    
+    
+    // MARK: ------------------------------字符串------------------------------
+    // MARK: 反转字符串
+    // 编写一个函数，其作用是将输入的字符串反转过来。输入字符串以字符数组 s 的形式给出。
+    //
+    // 不要给另外的数组分配额外的空间，你必须原地修改输入数组、使用 O(1) 的额外空间解决这一问题。
+    // 输入：s = ["h","e","l","l","o"]
+    // 输出：["o","l","l","e","h"]
+    func reverseString(_ s: inout [Character]) -> [Character] {
+        if s.count == 0 || s.count == 1 {
+            return s
+        }
+        var temp:Character
+        for index in 0..<s.count {
+            if index < Int(s.count/2)  {
+                temp = s[index]
+                s[index] = s[s.count - index-1]
+                s[s.count - index-1] = temp
+            }
+        }
+        return s
+    }
+    
+    
+    //MARK: -   整数反转
+    /// 示例：给定一个 32 位有符号整数，将整数中的数字进行反转。Int32.max值为214748367，Int32.min值为-2147483648
+    /// - Parameter x: 32位整形数 [−2^31,  2^31 − 1]
+    /// - Returns: 反转后的整型数
+    public func reverse(_ x: Int) -> Int {
+        var mx:Int = x
+        var rev:Int = 0
+        while (mx != 0){
+            let pop:Int = mx % 10
+            mx /= 10
+            rev = rev * 10 + pop
+            if (rev > Int32.max || ( rev == Int32.max && pop > 7)){
+                return 0
+            }
+            if (rev < Int32.min || ( rev == Int32.min && pop < -8 )) {
+                return 0
+            }
+        }
+        return rev
+    }
+    
+    // MARK: 字符串中的第一个唯一字符
+    // 给定一个字符串 s ，找到 它的第一个不重复的字符，并返回它的索引 。如果不存在，则返回 -1 。
+    // eg: 输入: s = "leetcode"
+    //     输出: 0
+    //     输入: s = "loveleetcode"
+    //     输出: 2
+    func firstUniqChar(_ s: String) -> Int {
+        if s.count == 0 {
+            return -1
+        }
+        if s.count == 1 {
+            return 0
+        }
+        
+        var set = Set<Character>()
+        var index = 0
+        for char in s {
+            if !set.contains(char) {
+                set.insert(char)
+                if s.lastIndex(of: char)! == s.index(s.startIndex, offsetBy: index) {
+                    return index
+                }
+            }
+            index += 1
+        }
+        return -1
+    }
+    
+/**
+ var firstUniqChar = function(s) {
+     for (let i = 0; i < s.length; i ++) {
+        if (s.indexOf(s[i]) === s.lastIndexOf(s[i])) {
+            return i
+        }
+     }
+     return -1
+ };
+
+ */
 }

@@ -3,4 +3,70 @@
    uuid = "07B267FE-F25C-4727-909A-4F8856A87D60"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AAA55B3F-8558-4F27-96C6-F18D874812E9"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LeetCode-practiceTests/LeetBookAlgorithemIntroTest.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "testReverseString()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "AAA55B3F-8558-4F27-96C6-F18D874812E9 - 9aba0ecce732faa2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LeetCode_practiceTests.LeetBookAlgorithemIntroTest.testReverseString() -&gt; ()"
+                  moduleName = "LeetCode-practiceTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dzw/Desktop/GitHub/LeetCode-practice/LeetCode-practiceTests/LeetBookAlgorithemIntroTest.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "65"
+                  endingLineNumber = "65"
+                  offsetFromSymbolStart = "516">
+               </Location>
+               <Location
+                  uuid = "AAA55B3F-8558-4F27-96C6-F18D874812E9 - 9aba0ecce732faa2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LeetCode_practiceTests.LeetBookAlgorithemIntroTest.testReverseString() -&gt; ()"
+                  moduleName = "LeetCode-practiceTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dzw/Desktop/GitHub/LeetCode-practice/LeetCode-practiceTests/LeetBookAlgorithemIntroTest.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "65"
+                  endingLineNumber = "65"
+                  offsetFromSymbolStart = "512">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "10545A57-261A-46B4-BD4F-D22D2D68DC21"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LeetCode-practiceTests/LeetDailyTest.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "testMaximumSwap()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

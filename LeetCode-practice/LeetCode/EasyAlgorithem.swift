@@ -85,7 +85,7 @@ class EasyAlgorithem:NSObject {
     
     //MARK: -   整数反转
     /// 示例：给定一个 32 位有符号整数，将整数中的数字进行反转。Int32.max值为214748367，Int32.min值为-2147483648
-    /// - Parameter x: 32位整形数
+    /// - Parameter x: 32位整形数 [−2^31,  2^31 − 1]
     /// - Returns: 反转后的整型数
     public func reverse(_ x: Int) -> Int {
         var mx:Int = x
@@ -93,13 +93,13 @@ class EasyAlgorithem:NSObject {
         while (mx != 0){
             let pop:Int = mx % 10
             mx /= 10
+            rev = rev * 10 + pop
             if (rev > Int32.max || ( rev == Int32.max && pop > 7)){
                 return 0
             }
             if (rev < Int32.min || ( rev == Int32.min && pop < -8 )) {
                 return 0
             }
-            rev = rev * 10 + pop
         }
         return rev
     }
