@@ -18,7 +18,6 @@ enum traverseBinaryTreeType {
 }
 
 private var traverseReult : NSMutableArray = []
-
 public class BinarySearchTreeNode<T:Comparable> {
     
     public var value:T
@@ -49,18 +48,18 @@ public class BinarySearchTreeNode<T:Comparable> {
         // if let _ = self.parent { return }
         if value < self.value {
            
-            if let leftChild = leftNode {
+            if let leftChild = leftNode {//有左子节点 递归往子节点继续检查
                 leftChild.addNode(value: value)
-            } else {
+            } else {//没有左子节点 直接添加到左子节点
                 let newNode = BinarySearchTreeNode(value: value)
                 newNode.parent = self
                 leftNode = newNode
             }
         } else {
            
-            if let rightChild = rightNode {
+            if let rightChild = rightNode {//有右子节点 递归往子节点继续检查
                 rightChild.addNode(value: value)
-            } else {
+            } else {//没有右子节点 直接添加到右子节点
                 let newNode = BinarySearchTreeNode(value: value)
                 newNode.parent = self
                 rightNode = newNode
@@ -68,10 +67,13 @@ public class BinarySearchTreeNode<T:Comparable> {
         }
     }
     
+    //实现有问题
     public func nonRecursive_AddNode(value:T) {
-        var node = value as! BinarySearchTreeNode<T>
+        var node = self//value as! BinarySearchTreeNode<T>
         var pnt = parent
-        let cmp = 0
+        let val = node.value as! Int
+        var cmp = val - (value as! Int)
+        
         while node.value != nil {
             pnt = node
             pnt = node as BinarySearchTreeNode<T>?
@@ -84,7 +86,7 @@ public class BinarySearchTreeNode<T:Comparable> {
                 return
             }
             //此时找到插入位置
-            if(cmp<0){
+            if(cmp<=0){
 //                par.left = Node(element,par);
                 pnt?.leftNode = BinarySearchTreeNode.init(value: parent!.value)
             }else{

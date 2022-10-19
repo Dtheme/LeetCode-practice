@@ -106,7 +106,7 @@ extension AVLTreeNode {
     ///          /    \                                 /     \
     ///         a      y (0)                           x(+1)   c
     ///              /   \                            / \     / \
-    ///             b      c      ->左旋              a   b   e   nil
+    ///             b      c      ->左旋     a   b   e   nil
     ///            / \    /  \                          /  \
     ///         nil   d  nil  e                        d   nil
     /// - Returns: 返回左旋之后的树 AVLTreeNode

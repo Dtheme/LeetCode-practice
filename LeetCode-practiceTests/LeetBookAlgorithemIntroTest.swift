@@ -64,5 +64,14 @@ class LeetBookAlgorithemIntroTest: XCTestCase {
         let reverseS = leetbook_ez.reverseString(&s)
         print(reverseS)
     }
+    
+    func testIsAnagram() {
+        let s = "anagram",
+            t = "nagaram"
+        let s1 = "aacc",
+            t1 = "ccac"
+        let result = leetbook_ez.isAnagram(s, t)
+        print(result)
+    }
 }
 

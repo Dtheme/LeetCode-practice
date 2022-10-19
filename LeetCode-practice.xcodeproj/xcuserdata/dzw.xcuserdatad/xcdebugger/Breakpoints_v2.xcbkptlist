@@ -7,54 +7,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "AAA55B3F-8558-4F27-96C6-F18D874812E9"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "LeetCode-practiceTests/LeetBookAlgorithemIntroTest.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
-            landmarkName = "testReverseString()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "AAA55B3F-8558-4F27-96C6-F18D874812E9 - 9aba0ecce732faa2"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "LeetCode_practiceTests.LeetBookAlgorithemIntroTest.testReverseString() -&gt; ()"
-                  moduleName = "LeetCode-practiceTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/dzw/Desktop/GitHub/LeetCode-practice/LeetCode-practiceTests/LeetBookAlgorithemIntroTest.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "65"
-                  endingLineNumber = "65"
-                  offsetFromSymbolStart = "516">
-               </Location>
-               <Location
-                  uuid = "AAA55B3F-8558-4F27-96C6-F18D874812E9 - 9aba0ecce732faa2"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "LeetCode_practiceTests.LeetBookAlgorithemIntroTest.testReverseString() -&gt; ()"
-                  moduleName = "LeetCode-practiceTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/dzw/Desktop/GitHub/LeetCode-practice/LeetCode-practiceTests/LeetBookAlgorithemIntroTest.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "65"
-                  endingLineNumber = "65"
-                  offsetFromSymbolStart = "512">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "10545A57-261A-46B4-BD4F-D22D2D68DC21"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -66,6 +18,54 @@
             endingLineNumber = "42"
             landmarkName = "testMaximumSwap()"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "96C8CF92-EF7B-4AEC-92CA-0E2A9B2EFED1"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LeetCode-practiceTests/LeetBookAlgorithemIntroTest.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
+            landmarkName = "testIsAnagram()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "96C8CF92-EF7B-4AEC-92CA-0E2A9B2EFED1 - 45d6cc7b34c2cf6f"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LeetCode_practiceTests.LeetBookAlgorithemIntroTest.testIsAnagram() -&gt; ()"
+                  moduleName = "LeetCode-practiceTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dzw/Desktop/GitHub/LeetCode-practice/LeetCode-practiceTests/LeetBookAlgorithemIntroTest.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "72"
+                  endingLineNumber = "72"
+                  offsetFromSymbolStart = "272">
+               </Location>
+               <Location
+                  uuid = "96C8CF92-EF7B-4AEC-92CA-0E2A9B2EFED1 - 45d6cc7b34c2cfa9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LeetCode_practiceTests.LeetBookAlgorithemIntroTest.testIsAnagram() -&gt; ()"
+                  moduleName = "LeetCode-practiceTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dzw/Desktop/GitHub/LeetCode-practice/LeetCode-practiceTests/LeetBookAlgorithemIntroTest.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "74"
+                  endingLineNumber = "74"
+                  offsetFromSymbolStart = "372">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
